@@ -1367,7 +1367,7 @@ section.hi-catey-section .catey-text-wrapper {
   max-width: 600px !important;
 }
 
-section.hi-catey-section img {
+.hi-catey-section .catey-image-wrapper {
   max-width: 400px !important;
   width: 100% !important;
   height: auto !important;
