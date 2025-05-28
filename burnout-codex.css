@@ -2005,11 +2005,16 @@ th {
     gap: 32px !important;
   }
   
-  .hero-section .catey-image-wrapper {
+  .hero-section .hero-text-wrapper {
+    order: 2 !important;
+    text-align: center !important;
+  }
+  
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
     order: 1 !important;
     max-width: 300px !important;
   }
-  
+}
   .hero-section .hero-text-wrapper {
     order: 2 !important;
     text-align: center !important;
