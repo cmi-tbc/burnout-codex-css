@@ -1350,8 +1350,7 @@ th {
   z-index: 300;
 }
 
-/* Hi Catey Section: Kill Webflow's Layout and Force Our Spacing */
-section.hi-catey-section > div.lg-container > div.two-col {
+section.hi-catey-section > div.lg-container > div.hi-catey-grid {
   all: unset;
   display: grid !important;
   grid-template-columns: 3fr 2fr !important;
@@ -1369,7 +1368,7 @@ section.hi-catey-section .catey-text-wrapper {
 
 .hi-catey-section .catey-image-wrapper {
   max-width: 400px !important;
-  width: 100% !important;
+  width: 90% !important;
   height: auto !important;
   border-radius: 12px !important;
   display: block !important;
