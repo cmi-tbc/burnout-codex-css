@@ -1,4 +1,31 @@
 <style>
+/* Webflow Reset */
+html, body, div, section, article, aside, header, footer, nav, main, p, h1, h2, h3, h4, h5, h6, ul, ol, li, figure, figcaption, blockquote, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #F5F0E6;
+  color: #1A1A1A;
+  line-height: 1.5;
+}
+
+/* Remove Webflow's global classes */
+.w-container, .w-button, .w-nav, .w-nav-link, .w-list {
+  all: unset;
+  all: revert;
+}
+
 /* ================================
    CSS CUSTOM PROPERTIES (BRAND COLORS)
    ================================ */
