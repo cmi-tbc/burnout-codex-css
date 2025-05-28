@@ -2003,16 +2003,48 @@ th {
     flex-direction: column !important;
     align-items: center !important;
     gap: 32px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
   }
   
   .hero-section .hero-text-wrapper {
-    order: 2 !important;
+    order: 1 !important;
     text-align: center !important;
+    width: 100% !important;
   }
   
   .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 1 !important;
+    order: 2 !important;
     max-width: 300px !important;
+  }
+  
+  /* Center the button */
+  .hero-section .button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  
+  /* Fix heading hierarchy */
+  .hero-section .heading--h1 {
+    font-size: clamp(28px, 5vw, 36px) !important;
+    text-align: center !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 18px !important;
+    text-align: center !important;
+  }
+}
+
+/* Additional mobile typography fixes */
+@media (max-width: 480px) {
+  .hero-section .heading--h1 {
+    font-size: clamp(24px, 6vw, 28px) !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 16px !important;
   }
 }
   .hero-section .hero-text-wrapper {
