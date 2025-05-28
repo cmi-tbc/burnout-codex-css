@@ -1916,21 +1916,25 @@ th {
 /* Fix tablet/mobile stacking layout */
 @media (max-width: 1024px) {
   .hero-section .two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     max-width: 600px !important;
     margin: 0 auto !important;
+    gap: 32px !important;
   }
   
   .hero-section .hero-text-wrapper {
+    width: 100% !important;
+    max-width: 500px !important;
     text-align: center !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
+    order: 2 !important;
   }
   
   .hero-section .catey-image-wrapper {
-    max-width: 100% !important;
-    margin: 0 auto !important;
-    display: flex !important;
-    justify-content: center !important;
+    width: auto !important;
+    max-width: 300px !important;
+    order: 1 !important;
   }
   
   .hero-section .heading--h1 {
