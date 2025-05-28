@@ -1454,10 +1454,36 @@ th {
   margin-top: 20px !important;
 }
 
-/* Improve card grid spacing */
+/* Improve card grid spacing and equal heights */
 .cards-3-col {
   gap: 32px !important;
   margin-top: 0 !important;
+  align-items: stretch !important;
+}
+
+/* Ensure all cards have equal height */
+.choose-your-next-step .card,
+.choose-your-next-step .card--offer {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 300px !important;
+}
+
+/* Equal height for testimonial cards */
+.testimonial-section .card--testimonial,
+.real-women-section .card--testimonial {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 200px !important;
+}
+
+/* Push buttons to bottom of cards */
+.choose-your-next-step .card .button,
+.choose-your-next-step .card--offer .button {
+  margin-top: auto !important;
+  margin-bottom: 0 !important;
 }
 
 /* Footer spacing adjustment */
