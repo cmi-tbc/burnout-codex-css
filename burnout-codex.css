@@ -1350,7 +1350,7 @@ th {
   z-index: 300;
 }
 
-section.hi-catey-section > div.lg-container > div.hi-catey-grid {
+section.hi-catey-section > div.lg-container > div.burnout-codex-grid {
   all: unset;
   display: grid !important;
   grid-template-columns: 3fr 2fr !important;
