@@ -1991,4 +1991,29 @@ th {
   }
 }
 
+/* ================================
+   SURGICAL HERO SECTION STACKING FIX
+   Add this to the END of your CSS file
+   ================================ */
+
+/* Force hero section to stack vertically on tablet and mobile */
+@media (max-width: 1024px) {
+  .hero-section .two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+  }
+  
+  .hero-section .catey-image-wrapper {
+    order: 1 !important;
+    max-width: 300px !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 2 !important;
+    text-align: center !important;
+  }
+}
+
 </style>
