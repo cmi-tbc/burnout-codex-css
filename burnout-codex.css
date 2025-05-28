@@ -1625,4 +1625,233 @@ th {
   }
 }
 
+/* ================================
+   RESPONSIVE FIXES - ALL BREAKPOINTS
+   ================================ */
+
+/* TABLET FIXES (1024px and below) */
+@media (max-width: 1024px) {
+  /* Fix 1: Hero section alignment and image size */
+  .hero-section .two-col {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    text-align: center;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .catey-image-wrapper {
+    order: 1;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 2;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Fix 2: Catey section text containment */
+  .hi-catey-section .catey-text-wrapper {
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  
+  /* Fix 3: CTA cards - reduce size and fix button width */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    min-height: 250px !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+  
+  .choose-your-next-step .card .button,
+  .choose-your-next-step .card--offer .button {
+    max-width: 220px !important;
+    margin: auto auto 0 auto !important;
+  }
+  
+  /* Fix 4: Testimonial cards - reduce empty space */
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    min-height: 150px !important;
+    max-width: 400px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+  }
+}
+
+/* MOBILE LARGE FIXES (768px and below) */
+@media (max-width: 768px) {
+  /* Fix 5: Button height issues */
+  .button,
+  .quiz-button,
+  .form-button {
+    min-height: 48px !important;
+    padding: 14px 24px !important;
+    line-height: 1.2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Better card spacing */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    max-width: 350px !important;
+  }
+  
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    max-width: 350px !important;
+  }
+}
+
+/* MOBILE MEDIUM FIXES (480px and below) */
+@media (max-width: 480px) {
+  /* Fix 6: Hero heading hierarchy */
+  .hero-section .heading--h1 {
+    font-size: clamp(24px, 6vw, 32px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Fix 7: Hero image size */
+  .hero-section .catey-image-wrapper {
+    max-width: 240px !important;
+  }
+  
+  /* Fix 8: Better edge spacing */
+  .lg-container {
+    padding-left: clamp(20px, 5vw, 32px) !important;
+    padding-right: clamp(20px, 5vw, 32px) !important;
+  }
+  
+  /* Smaller cards */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    max-width: 100% !important;
+    margin: 0 16px !important;
+  }
+  
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    max-width: 100% !important;
+    margin: 0 16px !important;
+  }
+}
+
+/* MOBILE SMALL FIXES (375px and below) */
+@media (max-width: 375px) {
+  /* Fix 9: Hero heading line breaks */
+  .hero-section .heading--h1 {
+    font-size: clamp(22px, 5.5vw, 28px) !important;
+    line-height: 1.1 !important;
+  }
+  
+  /* Force line breaks for better reading */
+  .hero-title-line1::after {
+    content: "\A";
+    white-space: pre;
+  }
+  
+  /* Better mobile spacing */
+  .lg-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Smaller hero image */
+  .hero-section .catey-image-wrapper {
+    max-width: 220px !important;
+  }
+}
+
+/* MOBILE TINY FIXES (320px and below) */
+@media (max-width: 320px) {
+  /* Fix 10: Prevent cards from breaking containers */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer,
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    margin: 0 8px !important;
+    max-width: calc(100% - 16px) !important;
+  }
+  
+  /* Tighter container spacing */
+  .lg-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  
+  /* Smaller typography */
+  .hero-section .heading--h1 {
+    font-size: 20px !important;
+  }
+  
+  .hero-section .catey-image-wrapper {
+    max-width: 200px !important;
+  }
+  
+  /* Smaller buttons */
+  .button,
+  .quiz-button,
+  .form-button {
+    padding: 12px 18px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* ADDITIONAL IMPROVEMENTS I IDENTIFIED */
+
+/* Better section spacing on all mobile */
+@media (max-width: 768px) {
+  .section--padding {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  
+  /* Better heading spacing */
+  .choose-your-next-step .heading--h2,
+  .testimonial-section .heading--h2,
+  .real-women-section .heading--h2 {
+    margin-bottom: 32px !important;
+  }
+}
+
+/* Improve grid responsiveness */
+@media (max-width: 1024px) {
+  .cards-3-col {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* Better testimonial layout on mobile */
+@media (max-width: 768px) {
+  .testimonial-section .cards-3-col,
+  .real-women-section .cards-3-col {
+    max-width: 400px !important;
+  }
+}
+
+/* Prevent horizontal scroll */
+* {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
 </style>
