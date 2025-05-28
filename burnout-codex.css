@@ -18,8 +18,6 @@ body {
   background-color: #F5F0E6;
   color: #1A1A1A;
   line-height: 1.5;
-  margin: 0;
-  font-size: 16px;
 }
 
 /* Remove Webflow's global classes */
@@ -59,6 +57,22 @@ body {
   /* ✨ Optional Accent */
   --deep-burgundy: #800000;
   --muted-gold: #B8860B;
+}
+
+/* ================================
+   GLOBAL RESET
+   ================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1A1A1A;
+  background-color: #F5F0E6;
 }
 
 /* ================================
@@ -1612,7 +1626,487 @@ th {
 }
 
 /* ================================
-   HERO SECTION RESPONSIVE FIX
+   TARGETED RESPONSIVE FIXES - PRESERVE DESKTOP
+   ================================ */
+
+/* TABLET FIXES (1024px and below) - More Conservative */
+@media (max-width: 1024px) {
+  /* Fix 1: Hero section - ONLY for tablet/mobile */
+  .hero-section .two-col {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    text-align: center;
+  }
+  
+  .hero-section .catey-image-wrapper {
+    order: 1;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 2;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Fix 2: Catey section text containment - PRESERVE existing good layout */
+  .hi-catey-section .catey-text-wrapper {
+    max-width: 550px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  
+  /* Fix 3: CTA cards - reduce size and fix button width */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    min-height: 280px !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+  }
+  
+  .choose-your-next-step .card .button,
+  .choose-your-next-step .card--offer .button {
+    max-width: 200px !important;
+    margin: auto auto 0 auto !important;
+  }
+  
+  /* Fix 4: Testimonial cards - reduce empty space */
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    min-height: 140px !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+    padding: 18px !important;
+  }
+}
+
+/* MOBILE LARGE FIXES (768px and below) */
+@media (max-width: 768px) {
+  /* Fix 5: Button height issues - MORE CONSERVATIVE */
+  .choose-your-next-step .card .button,
+  .choose-your-next-step .card--offer .button {
+    min-height: 44px !important;
+    padding: 12px 20px !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Slightly smaller cards */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    max-width: 320px !important;
+  }
+  
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    max-width: 320px !important;
+  }
+  
+  /* Better section spacing */
+  .choose-your-next-step,
+  .testimonial-section,
+  .real-women-section {
+    padding: 60px 0 !important;
+  }
+}
+
+/* MOBILE MEDIUM FIXES (480px and below) */
+@media (max-width: 480px) {
+  /* Fix 6: Hero heading hierarchy - PRESERVE power */
+  .hero-section .heading--h1 {
+    font-size: clamp(26px, 6vw, 32px) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 16px !important;
+  }
+  
+  /* Fix 7: Hero image size - SMALLER */
+  .hero-section .catey-image-wrapper {
+    max-width: 250px !important;
+  }
+  
+  /* Fix 8: Better edge spacing - CONSERVATIVE */
+  .lg-container {
+    padding-left: clamp(20px, 4vw, 28px) !important;
+    padding-right: clamp(20px, 4vw, 28px) !important;
+  }
+  
+  /* Cards with better margins */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    max-width: calc(100% - 32px) !important;
+    margin: 0 16px !important;
+  }
+  
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    max-width: calc(100% - 32px) !important;
+    margin: 0 16px !important;
+  }
+  
+  /* Smaller section padding */
+  .choose-your-next-step,
+  .testimonial-section,
+  .real-women-section {
+    padding: 50px 0 !important;
+  }
+}
+
+/* MOBILE SMALL FIXES (375px and below) */
+@media (max-width: 375px) {
+  /* Fix 9: Hero heading - MAINTAIN POWER */
+  .hero-section .heading--h1 {
+    font-size: clamp(24px, 5.5vw, 28px) !important;
+    line-height: 1.1 !important;
+  }
+  
+  /* Smaller hero image */
+  .hero-section .catey-image-wrapper {
+    max-width: 230px !important;
+  }
+  
+  /* Better mobile spacing */
+  .lg-container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+/* MOBILE TINY FIXES (320px and below) */
+@media (max-width: 320px) {
+  /* Fix 10: Prevent cards from breaking containers */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer,
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    margin: 0 12px !important;
+    max-width: calc(100% - 24px) !important;
+  }
+  
+  /* Tighter container spacing */
+  .lg-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* Hero image even smaller */
+  .hero-section .catey-image-wrapper {
+    max-width: 210px !important;
+  }
+  
+  /* Smaller buttons */
+  .choose-your-next-step .card .button,
+  .choose-your-next-step .card--offer .button {
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* PRESERVE DESKTOP LAYOUTS - Override any conflicts */
+@media (min-width: 1025px) {
+  /* Ensure desktop hero section stays intact */
+  .hero-section .two-col {
+    grid-template-columns: 3fr 2fr !important;
+    gap: clamp(24px, 4vw, 60px) !important;
+    text-align: left !important;
+  }
+  
+  .hero-section .catey-image-wrapper {
+    order: 2 !important;
+    max-width: 400px !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 1 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  /* Ensure Catey section stays intact */
+  .hi-catey-section .catey-text-wrapper {
+    max-width: 600px !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  
+  /* Ensure cards don't have size restrictions on desktop */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    min-height: 300px !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  
+  .choose-your-next-step .card .button,
+  .choose-your-next-step .card--offer .button {
+    max-width: none !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    min-height: 200px !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 24px !important;
+  }
+}
+
+/* ================================
+   DURABLE RESPONSIVE TYPOGRAPHY SYSTEM
+   ================================ */
+
+/* Extend existing typography classes with responsive scaling */
+:root {
+  /* Desktop defaults (already defined in your system) */
+  --heading-h1-size: clamp(32px, 3vw + 1rem, 48px);
+  --heading-h1-line-height: 1.2;
+  --text-body-size: 18px;
+  --text-body-line-height: 1.5;
+  
+  /* Mobile scaling variables */
+  --mobile-heading-scale: 1;
+  --mobile-text-scale: 1;
+  --mobile-line-height-adjustment: 0;
+  --mobile-text-align: inherit;
+}
+
+/* Mobile scaling adjustments */
+@media (max-width: 480px) {
+  :root {
+    --mobile-heading-scale: 0.85;
+    --mobile-text-scale: 0.9;
+    --mobile-line-height-adjustment: -0.1;
+    --mobile-text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --mobile-heading-scale: 0.75;
+    --mobile-text-scale: 0.85;
+    --mobile-line-height-adjustment: -0.12;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    --mobile-heading-scale: 0.7;
+    --mobile-text-scale: 0.8;
+    --mobile-line-height-adjustment: -0.15;
+  }
+}
+
+/* Apply responsive scaling to hero section only */
+.hero-section .heading--h1 {
+  font-size: calc(var(--heading-h1-size, 48px) * var(--mobile-heading-scale, 1)) !important;
+  line-height: calc(var(--heading-h1-line-height, 1.2) + var(--mobile-line-height-adjustment, 0)) !important;
+  text-align: var(--mobile-text-align, inherit) !important;
+}
+
+.hero-section .text--body {
+  font-size: calc(var(--text-body-size, 18px) * var(--mobile-text-scale, 1)) !important;
+  text-align: var(--mobile-text-align, inherit) !important;
+}
+
+.hero-section .hero-text-wrapper {
+  text-align: var(--mobile-text-align, inherit) !important;
+}
+
+/* Fix tablet/mobile stacking layout */
+@media (max-width: 1024px) {
+  .hero-section .two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    gap: 32px !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    width: 100% !important;
+    max-width: 500px !important;
+    text-align: center !important;
+    order: 2 !important;
+  }
+  
+  .hero-section .catey-image-wrapper {
+    width: auto !important;
+    max-width: 300px !important;
+    order: 1 !important;
+  }
+  
+  .hero-section .heading--h1 {
+    text-align: center !important;
+  }
+  
+  .hero-section .text--body {
+    text-align: center !important;
+  }
+}
+
+/* Container width control for better line breaks */
+@media (max-width: 480px) {
+  .hero-section .hero-text-wrapper {
+    max-width: min(90vw, 400px) !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-section .hero-text-wrapper {
+    max-width: min(85vw, 320px) !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-section .hero-text-wrapper {
+    max-width: min(90vw, 290px) !important;
+  }
+}
+
+/* ================================
+   SURGICAL HERO SECTION ALIGNMENT FIX
+   Add this to the END of your CSS file
+   ================================ */
+
+/* Fix hero section alignment for tablet and mobile */
+@media (max-width: 1024px) {
+  .hero-section .two-col {
+    text-align: center !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .heading--h1 {
+    text-align: center !important;
+  }
+  
+  .hero-section .text--body {
+    text-align: center !important;
+  }
+}
+
+/* ================================
+   SURGICAL HERO SECTION STACKING FIX
+   Add this to the END of your CSS file
+   ================================ */
+
+/* Force hero section to stack vertically on tablet and mobile */
+@media (max-width: 1024px) {
+  .hero-section .two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 1 !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
+    order: 2 !important;
+    max-width: 300px !important;
+  }
+  
+  /* Center the button */
+  .hero-section .button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  
+  /* Fix heading hierarchy and centering */
+  .hero-section .heading--h1 {
+    font-size: clamp(28px, 5vw, 36px) !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 18px !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* RESTORE DESKTOP LAYOUT */
+@media (min-width: 1025px) {
+  .hero-section .two-col {
+    display: grid !important;
+    grid-template-columns: 3fr 2fr !important;
+    align-items: center !important;
+    gap: clamp(24px, 4vw, 60px) !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 1 !important;
+    grid-column: 1 !important;
+    text-align: left !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
+    order: 2 !important;
+    grid-column: 2 !important;
+    max-width: 400px !important;
+  }
+  
+  .hero-section .button {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: inline-block !important;
+  }
+  
+  .hero-section .heading--h1 {
+    text-align: left !important;
+    width: auto !important;
+  }
+  
+  .hero-section .text--body {
+    text-align: left !important;
+    width: auto !important;
+  }
+  
+  .hero-section .button--ghost {
+    text-align: left !important;
+  }
+}
+
+/* Additional mobile typography fixes */
+@media (max-width: 480px) {
+  .hero-section .heading--h1 {
+    font-size: clamp(24px, 6vw, 28px) !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 16px !important;
+  }
+/* ================================
+   SURGICAL HERO SECTION STACKING FIX
+   Add this to the END of your CSS file
    ================================ */
 
 /* Force hero section to stack vertically on tablet and mobile */
@@ -1728,5 +2222,197 @@ th {
   .hero-section .text--body {
     font-size: 16px !important;
   }
+
+/* ================================
+   SURGICAL HERO SECTION STACKING FIX
+   Add this to the END of your CSS file
+   ================================ */
+
+/* Force hero section to stack vertically on tablet and mobile */
+@media (max-width: 1024px) {
+  .hero-section .two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 1 !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
+    order: 2 !important;
+    max-width: 300px !important;
+  }
+  
+  /* Center the button */
+  .hero-section .button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: inline-block !important;
+    line-height: 1.5 !important;
+    padding: 14px 28px !important;
+  }
+  
+  /* Fix heading hierarchy and centering */
+  .hero-section .heading--h1 {
+    font-size: clamp(28px, 5vw, 36px) !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 18px !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
 }
+
+/* RESTORE DESKTOP LAYOUT */
+@media (min-width: 1025px) {
+  .hero-section .two-col {
+    display: grid !important;
+    grid-template-columns: 3fr 2fr !important;
+    align-items: center !important;
+    gap: clamp(24px, 4vw, 60px) !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 1 !important;
+    grid-column: 1 !important;
+    text-align: left !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
+    order: 2 !important;
+    grid-column: 2 !important;
+    max-width: 400px !important;
+  }
+  
+  .hero-section .button {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    display: inline-block !important;
+  }
+  
+  .hero-section .heading--h1 {
+    text-align: left !important;
+    width: auto !important;
+  }
+  
+  .hero-section .text--body {
+    text-align: left !important;
+    width: auto !important;
+  }
+  
+  .hero-section .subheading--sh1 {
+    text-align: left !important;
+    width: auto !important;
+  }
+  
+  .hero-section .button--ghost {
+    text-align: left !important;
+  }
+}
+
+/* Additional mobile typography fixes */
+@media (max-width: 480px) {
+  .hero-section .heading--h1 {
+    font-size: clamp(24px, 6vw, 28px) !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 16px !important;
+  }
+}/* ================================
+   SURGICAL HERO SECTION STACKING FIX
+   Add this to the END of your CSS file
+   ================================ */
+
+/* Force hero section to stack vertically on tablet and mobile */
+@media (max-width: 1024px) {
+  .hero-section .two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 1 !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
+    order: 2 !important;
+    max-width: 300px !important;
+  }
+  
+  /* Center the button */
+  .hero-section .button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  
+  /* Fix heading hierarchy and centering */
+  .hero-section .heading--h1 {
+    font-size: clamp(28px, 5vw, 36px) !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 18px !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Additional mobile typography fixes */
+@media (max-width: 480px) {
+  .hero-section .heading--h1 {
+    font-size: clamp(24px, 6vw, 28px) !important;
+  }
+  
+  .hero-section .text--body {
+    font-size: 16px !important;
+  }
+}
+  .hero-section .hero-text-wrapper {
+    order: 2 !important;
+    text-align: center !important;
+  }
+}
+
 </style>
