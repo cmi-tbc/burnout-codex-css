@@ -1357,7 +1357,10 @@ th {
 /* 1. Next Step Cards - Bold & Larger Headings */
 .card h3,
 .card--offer h3,
-.choose-your-next-step .card h3 {
+.card .subheading--sh2,
+.card--offer .subheading--sh2,
+.choose-your-next-step .card h3,
+.choose-your-next-step .card .subheading--sh2 {
   font-family: 'Playfair Display', serif !important;
   font-weight: 700 !important;
   font-size: 24px !important;
@@ -1366,14 +1369,9 @@ th {
   margin-bottom: 16px !important;
 }
 
-.card p,
-.card--offer p,
-.choose-your-next-step .card p {
-  font-family: 'Source Sans Pro', sans-serif !important;
-  font-size: 16px !important;
-  font-weight: 400 !important;
-  line-height: 1.6 !important;
-  color: var(--charcoal) !important;
+.card .text--body,
+.card--offer .text--body,
+.choose-your-next-step .card .text--body {
   margin-bottom: 16px !important;
 }
 
@@ -1383,13 +1381,7 @@ th {
   padding: 80px 0 !important;
 }
 
-.choose-your-next-step .heading--h2,
-.choose-your-next-step h2 {
-  font-family: 'Playfair Display', serif !important;
-  font-weight: 700 !important;
-  font-size: clamp(32px, 4vw, 42px) !important;
-  line-height: 1.3 !important;
-  color: var(--charcoal) !important;
+.choose-your-next-step .heading--h2 {
   text-align: center !important;
   margin-bottom: 48px !important;
   max-width: 800px !important;
@@ -1405,14 +1397,7 @@ th {
 }
 
 .testimonial-section .heading--h2,
-.testimonial-section h2,
-.real-women-section .heading--h2,
-.real-women-section h2 {
-  font-family: 'Playfair Display', serif !important;
-  font-weight: 700 !important;
-  font-size: clamp(32px, 4vw, 42px) !important;
-  line-height: 1.3 !important;
-  color: var(--charcoal) !important;
+.real-women-section .heading--h2 {
   text-align: center !important;
   margin-bottom: 48px !important;
   max-width: 800px !important;
@@ -1427,12 +1412,7 @@ th {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
-.card--testimonial p {
-  font-family: 'Lato', sans-serif !important;
-  font-style: italic !important;
-  font-size: 16px !important;
-  line-height: 1.6 !important;
-  color: var(--charcoal) !important;
+.card--testimonial .text--quotes {
   margin: 0 !important;
 }
 
@@ -1448,8 +1428,7 @@ th {
   padding: 80px 0 !important;
 }
 
-.burnout-looks-like-section .heading--h2,
-.burnout-looks-like-section h2 {
+.burnout-looks-like-section .heading--h2 {
   margin-bottom: 32px !important;
 }
 
@@ -1509,13 +1488,9 @@ th {
   }
   
   .choose-your-next-step .heading--h2,
-  .choose-your-next-step h2,
   .testimonial-section .heading--h2,
-  .testimonial-section h2,
-  .real-women-section .heading--h2,
-  .real-women-section h2 {
+  .real-women-section .heading--h2 {
     margin-bottom: 32px !important;
-    font-size: 28px !important;
   }
   
   .card h3,
