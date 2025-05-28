@@ -1966,4 +1966,29 @@ th {
   }
 }
 
+/* ================================
+   SURGICAL HERO SECTION ALIGNMENT FIX
+   Add this to the END of your CSS file
+   ================================ */
+
+/* Fix hero section alignment for tablet and mobile */
+@media (max-width: 1024px) {
+  .hero-section .two-col {
+    text-align: center !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .heading--h1 {
+    text-align: center !important;
+  }
+  
+  .hero-section .text--body {
+    text-align: center !important;
+  }
+}
+
 </style>
