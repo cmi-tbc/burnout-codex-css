@@ -1351,618 +1351,338 @@ th {
 }
 
 /* ================================
-   HOMEPAGE SECTION FIXES
+   CLEAN RESPONSIVE SYSTEM
+   Replace all the "fix" sections with this single system
    ================================ */
 
-/* 1. Next Step Cards - Bold & Larger Headings */
-.card h3,
-.card--offer h3,
+/* ================================
+   ENHANCED TYPOGRAPHY CLASSES
+   ================================ */
+
+/* Card heading improvements */
 .card .subheading--sh2,
-.card--offer .subheading--sh2,
-.choose-your-next-step .card h3,
-.choose-your-next-step .card .subheading--sh2 {
-  font-family: 'Playfair Display', serif !important;
+.card--offer .subheading--sh2 {
   font-weight: 700 !important;
   font-size: 24px !important;
-  line-height: 1.3 !important;
-  color: var(--charcoal) !important;
   margin-bottom: 16px !important;
-}
-
-.card .text--body,
-.card--offer .text--body,
-.choose-your-next-step .card .text--body {
-  margin-bottom: 16px !important;
-}
-
-/* 2 & 3. Choose Your Next Step Section - Taupe Background & Proper Spacing */
-.choose-your-next-step {
-  background-color: var(--taupe) !important;
-  padding: 80px 0 !important;
-}
-
-.choose-your-next-step .heading--h2 {
-  text-align: center !important;
-  margin-bottom: 48px !important;
-  max-width: 800px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* 4. Testimonial Section - Light Cream Background & Proper Spacing */
-.testimonial-section,
-.real-women-section {
-  background-color: var(--light-cream) !important;
-  padding: 80px 0 !important;
-}
-
-.testimonial-section .heading--h2,
-.real-women-section .heading--h2 {
-  text-align: center !important;
-  margin-bottom: 48px !important;
-  max-width: 800px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Enhanced testimonial cards to pop against light cream background */
-.card--testimonial {
-  background-color: var(--warm-cream) !important;
-  border: 1px solid var(--soft-gray) !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
-}
-
-.card--testimonial .text--quotes {
-  margin: 0 !important;
-}
-
-/* 5. Additional Improvements I Identified */
-
-/* Hero section improvements */
-.hero-section {
-  padding: 100px 0 80px 0 !important;
-}
-
-/* Burnout looks like section spacing */
-.burnout-looks-like-section {
-  padding: 80px 0 !important;
-}
-
-.burnout-looks-like-section .heading--h2 {
-  margin-bottom: 32px !important;
-}
-
-.burnout-looks-like-section ul {
-  margin-bottom: 32px !important;
-}
-
-/* Button spacing in cards */
-.card .button,
-.card--offer .button {
-  margin-top: 20px !important;
-}
-
-/* Improve card grid spacing and equal heights */
-.cards-3-col {
-  gap: 32px !important;
-  margin-top: 0 !important;
-  align-items: stretch !important;
-}
-
-/* Ensure all cards have equal height */
-.choose-your-next-step .card,
-.choose-your-next-step .card--offer {
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-  min-height: 300px !important;
-}
-
-/* Equal height for testimonial cards */
-.testimonial-section .card--testimonial,
-.real-women-section .card--testimonial {
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-  min-height: 200px !important;
-}
-
-/* Push buttons to bottom of cards */
-.choose-your-next-step .card .button,
-.choose-your-next-step .card--offer .button {
-  margin-top: auto !important;
-  margin-bottom: 0 !important;
-}
-
-/* Footer spacing adjustment */
-.site-footer {
-  margin-top: 80px !important;
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .choose-your-next-step,
-  .testimonial-section,
-  .real-women-section {
-    padding: 60px 0 !important;
-  }
-  
-  .choose-your-next-step .heading--h2,
-  .testimonial-section .heading--h2,
-  .real-women-section .heading--h2 {
-    margin-bottom: 32px !important;
-  }
-  
-  .card h3,
-  .card--offer h3 {
-    font-size: 24px !important;
-  }
-  
-  .hero-section {
-    padding: 60px 0 40px 0 !important;
-  }
-  
-  .burnout-looks-like-section {
-    padding: 60px 0 !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .choose-your-next-step,
-  .testimonial-section,
-  .real-women-section {
-    padding: 40px 0 !important;
-  }
-  
-  .card h3,
-  .card--offer h3 {
-    font-size: 22px !important;
-  }
 }
 
 /* ================================
-   HI CATEY SECTION - FIXED SPACING
+   SECTION BACKGROUNDS & SPACING
    ================================ */
 
-.hi-catey-section {
-  background-color: var(--warm-cream);
+.choose-your-next-step {
+  background-color: var(--taupe);
   padding: 80px 0;
 }
 
-.hi-catey-section .lg-container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 clamp(16px, 3vw, 48px);
+.testimonial-section,
+.real-women-section {
+  background-color: var(--light-cream);
+  padding: 80px 0;
 }
 
-.hi-catey-section .two-col {
-  display: grid !important;
-  grid-template-columns: 400px 1fr !important;
-  align-items: center !important;
-  gap: clamp(40px, 6vw, 80px) !important;
-  max-width: 100% !important;
+.hero-section {
+  padding: 100px 0 80px 0;
 }
 
-.hi-catey-section .catey-text-wrapper {
-  max-width: 600px;
-  padding-right: 0;
-}
-
-.hi-catey-section .catey-text-wrapper h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: clamp(32px, 4vw, 48px);
-  line-height: 1.2;
-  color: var(--charcoal);
-  margin-bottom: 24px;
-}
-
-.hi-catey-section .catey-text-wrapper p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--charcoal);
-  margin-bottom: 16px;
-}
-
-.hi-catey-section .catey-image-wrapper {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.hi-catey-section .catey-image-wrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .hi-catey-section .two-col {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important;
-    text-align: center;
-  }
-  
-  .hi-catey-section .catey-text-wrapper {
-    max-width: 100%;
-    order: 2;
-  }
-  
-  .hi-catey-section .catey-image-wrapper {
-    order: 1;
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hi-catey-section {
-    padding: 60px 0;
-  }
-  
-  .hi-catey-section .catey-image-wrapper {
-    max-width: 280px;
-  }
-  
-  .hi-catey-section .two-col {
-    gap: 32px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hi-catey-section {
-    padding: 40px 0;
-  }
-  
-  .hi-catey-section .catey-text-wrapper h2 {
-    font-size: 28px;
-  }
-  
-  .hi-catey-section .catey-text-wrapper p {
-    font-size: 16px;
-  }
+.burnout-looks-like-section {
+  padding: 80px 0;
 }
 
 /* ================================
-   TARGETED RESPONSIVE FIXES - PRESERVE DESKTOP
+   CARD SYSTEM IMPROVEMENTS
    ================================ */
 
-/* TABLET FIXES (1024px and below) - More Conservative */
+/* Equal height cards */
+.cards-3-col {
+  align-items: stretch;
+}
+
+.choose-your-next-step .card,
+.choose-your-next-step .card--offer,
+.testimonial-section .card--testimonial,
+.real-women-section .card--testimonial {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.choose-your-next-step .card {
+  min-height: 280px;
+}
+
+.testimonial-section .card--testimonial,
+.real-women-section .card--testimonial {
+  min-height: 180px;
+  background-color: var(--warm-cream);
+  border: 1px solid var(--soft-gray);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Push buttons to bottom */
+.choose-your-next-step .card .button,
+.choose-your-next-step .card--offer .button {
+  margin-top: auto;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS
+   ================================ */
+
+/* LARGE TABLET (1024px and below) */
 @media (max-width: 1024px) {
-  /* Fix 1: Hero section - ONLY for tablet/mobile */
+  /* Hero section stacking */
   .hero-section .two-col {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 40px;
   }
   
   .hero-section .catey-image-wrapper {
     order: 1;
-    max-width: 300px !important;
-    margin: 0 auto !important;
+    max-width: 300px;
   }
   
   .hero-section .hero-text-wrapper {
     order: 2;
-    max-width: 600px !important;
-    margin: 0 auto !important;
+    max-width: 500px;
   }
   
-  /* Fix 2: Catey section text containment - PRESERVE existing good layout */
+  /* Catey section centering */
   .hi-catey-section .catey-text-wrapper {
-    max-width: 550px !important;
-    margin: 0 auto !important;
-    text-align: center !important;
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto;
   }
   
-  /* Fix 3: CTA cards - reduce size and fix button width */
+  /* Card sizing */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer {
-    min-height: 280px !important;
-    max-width: 350px !important;
-    margin: 0 auto !important;
+    max-width: 350px;
+    margin: 0 auto;
   }
   
   .choose-your-next-step .card .button,
   .choose-your-next-step .card--offer .button {
-    max-width: 200px !important;
-    margin: auto auto 0 auto !important;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  /* Fix 4: Testimonial cards - reduce empty space */
   .testimonial-section .card--testimonial,
   .real-women-section .card--testimonial {
-    min-height: 140px !important;
-    max-width: 350px !important;
-    margin: 0 auto !important;
-    padding: 18px !important;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 18px;
   }
 }
 
-/* MOBILE LARGE FIXES (768px and below) */
+/* TABLET (768px and below) */
 @media (max-width: 768px) {
-  /* Fix 5: Button height issues - MORE CONSERVATIVE */
+  /* Section spacing */
+  .choose-your-next-step,
+  .testimonial-section,
+  .real-women-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section {
+    padding: 60px 0 40px 0;
+  }
+  
+  .burnout-looks-like-section {
+    padding: 60px 0;
+  }
+  
+  /* Card refinements */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer {
+    max-width: 320px;
+  }
+  
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    max-width: 320px;
+  }
+  
+  /* Button improvements */
   .choose-your-next-step .card .button,
   .choose-your-next-step .card--offer .button {
-    min-height: 44px !important;
-    padding: 12px 20px !important;
-    line-height: 1.3 !important;
+    min-height: 44px;
+    padding: 12px 20px;
   }
   
-  /* Slightly smaller cards */
-  .choose-your-next-step .card,
-  .choose-your-next-step .card--offer {
-    max-width: 320px !important;
-  }
-  
-  .testimonial-section .card--testimonial,
-  .real-women-section .card--testimonial {
-    max-width: 320px !important;
-  }
-  
-  /* Better section spacing */
-  .choose-your-next-step,
-  .testimonial-section,
-  .real-women-section {
-    padding: 60px 0 !important;
+  /* Section headings */
+  .choose-your-next-step .heading--h2,
+  .testimonial-section .heading--h2,
+  .real-women-section .heading--h2 {
+    margin-bottom: 32px;
   }
 }
 
-/* MOBILE MEDIUM FIXES (480px and below) */
+/* MOBILE LARGE (480px and below) */
 @media (max-width: 480px) {
-  /* Fix 6: Hero heading hierarchy - PRESERVE power */
-  .hero-section .heading--h1 {
-    font-size: clamp(26px, 6vw, 32px) !important;
-    line-height: 1.15 !important;
-    margin-bottom: 16px !important;
+  /* Section spacing */
+  .choose-your-next-step,
+  .testimonial-section,
+  .real-women-section {
+    padding: 50px 0;
   }
   
-  /* Fix 7: Hero image size - SMALLER */
+  /* Hero section */
   .hero-section .catey-image-wrapper {
-    max-width: 250px !important;
+    max-width: 250px;
   }
   
-  /* Fix 8: Better edge spacing - CONSERVATIVE */
+  .hero-section .hero-text-wrapper {
+    max-width: 400px;
+  }
+  
+  /* Typography scaling */
+  .hero-section .heading--h1 {
+    font-size: clamp(26px, 6vw, 32px);
+    line-height: 1.15;
+    text-align: center;
+  }
+  
+  .hero-section .text--body {
+    text-align: center;
+  }
+  
+  /* Container spacing */
   .lg-container {
-    padding-left: clamp(20px, 4vw, 28px) !important;
-    padding-right: clamp(20px, 4vw, 28px) !important;
+    padding-left: clamp(20px, 4vw, 28px);
+    padding-right: clamp(20px, 4vw, 28px);
   }
   
-  /* Cards with better margins */
+  /* Cards */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer {
-    max-width: calc(100% - 32px) !important;
-    margin: 0 16px !important;
+    max-width: calc(100% - 32px);
+    margin: 0 16px;
   }
   
   .testimonial-section .card--testimonial,
   .real-women-section .card--testimonial {
-    max-width: calc(100% - 32px) !important;
-    margin: 0 16px !important;
+    max-width: calc(100% - 32px);
+    margin: 0 16px;
   }
   
-  /* Smaller section padding */
-  .choose-your-next-step,
-  .testimonial-section,
-  .real-women-section {
-    padding: 50px 0 !important;
+  /* Card headings */
+  .card .subheading--sh2,
+  .card--offer .subheading--sh2 {
+    font-size: 22px !important;
   }
 }
 
-/* MOBILE SMALL FIXES (375px and below) */
+/* MOBILE MEDIUM (375px and below) */
 @media (max-width: 375px) {
-  /* Fix 9: Hero heading - MAINTAIN POWER */
-  .hero-section .heading--h1 {
-    font-size: clamp(24px, 5.5vw, 28px) !important;
-    line-height: 1.1 !important;
-  }
-  
-  /* Smaller hero image */
+  /* Hero section */
   .hero-section .catey-image-wrapper {
-    max-width: 230px !important;
+    max-width: 230px;
   }
   
-  /* Better mobile spacing */
+  .hero-section .hero-text-wrapper {
+    max-width: 320px;
+  }
+  
+  .hero-section .heading--h1 {
+    font-size: clamp(24px, 5.5vw, 28px);
+    line-height: 1.1;
+  }
+  
+  /* Container spacing */
   .lg-container {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
-/* MOBILE TINY FIXES (320px and below) */
+/* MOBILE SMALL (320px and below) */
 @media (max-width: 320px) {
-  /* Fix 10: Prevent cards from breaking containers */
+  /* Hero section */
+  .hero-section .catey-image-wrapper {
+    max-width: 210px;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    max-width: 290px;
+  }
+  
+  .hero-section .heading--h1 {
+    font-size: 22px;
+    line-height: 1.05;
+  }
+  
+  /* Container spacing */
+  .lg-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  /* Prevent container overflow */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer,
   .testimonial-section .card--testimonial,
   .real-women-section .card--testimonial {
-    margin: 0 12px !important;
-    max-width: calc(100% - 24px) !important;
-  }
-  
-  /* Tighter container spacing */
-  .lg-container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-  
-  /* Hero image even smaller */
-  .hero-section .catey-image-wrapper {
-    max-width: 210px !important;
+    margin: 0 12px;
+    max-width: calc(100% - 24px);
   }
   
   /* Smaller buttons */
   .choose-your-next-step .card .button,
   .choose-your-next-step .card--offer .button {
-    padding: 10px 16px !important;
-    font-size: 14px !important;
-  }
-}
-
-/* PRESERVE DESKTOP LAYOUTS - Override any conflicts */
-@media (min-width: 1025px) {
-  /* Ensure desktop hero section stays intact */
-  .hero-section .two-col {
-    grid-template-columns: 3fr 2fr !important;
-    gap: clamp(24px, 4vw, 60px) !important;
-    text-align: left !important;
-  }
-  
-  .hero-section .catey-image-wrapper {
-    order: 2 !important;
-    max-width: 400px !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-  }
-  
-  /* Ensure Catey section stays intact */
-  .hi-catey-section .catey-text-wrapper {
-    max-width: 600px !important;
-    margin: 0 !important;
-    text-align: left !important;
-  }
-  
-  /* Ensure cards don't have size restrictions on desktop */
-  .choose-your-next-step .card,
-  .choose-your-next-step .card--offer {
-    min-height: 300px !important;
-    max-width: none !important;
-    margin: 0 !important;
-  }
-  
-  .choose-your-next-step .card .button,
-  .choose-your-next-step .card--offer .button {
-    max-width: none !important;
-    margin-top: auto !important;
-    margin-bottom: 0 !important;
-  }
-  
-  .testimonial-section .card--testimonial,
-  .real-women-section .card--testimonial {
-    min-height: 200px !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 24px !important;
+    padding: 10px 16px;
+    font-size: 14px;
   }
 }
 
 /* ================================
-   DURABLE RESPONSIVE TYPOGRAPHY SYSTEM
+   DESKTOP PRESERVATION (1025px+)
    ================================ */
-
-/* Extend existing typography classes with responsive scaling */
-:root {
-  /* Desktop defaults (already defined in your system) */
-  --heading-h1-size: clamp(32px, 3vw + 1rem, 48px);
-  --heading-h1-line-height: 1.2;
-  --text-body-size: 18px;
-  --text-body-line-height: 1.5;
-  
-  /* Mobile scaling variables */
-  --mobile-heading-scale: 1;
-  --mobile-text-scale: 1;
-  --mobile-line-height-adjustment: 0;
-  --mobile-text-align: inherit;
-}
-
-/* Mobile scaling adjustments */
-@media (max-width: 480px) {
-  :root {
-    --mobile-heading-scale: 0.85;
-    --mobile-text-scale: 0.9;
-    --mobile-line-height-adjustment: -0.1;
-    --mobile-text-align: center;
-  }
-}
-
-@media (max-width: 375px) {
-  :root {
-    --mobile-heading-scale: 0.75;
-    --mobile-text-scale: 0.85;
-    --mobile-line-height-adjustment: -0.12;
-  }
-}
-
-@media (max-width: 320px) {
-  :root {
-    --mobile-heading-scale: 0.7;
-    --mobile-text-scale: 0.8;
-    --mobile-line-height-adjustment: -0.15;
-  }
-}
-
-/* Apply responsive scaling to hero section only */
-.hero-section .heading--h1 {
-  font-size: calc(var(--heading-h1-size, 48px) * var(--mobile-heading-scale, 1)) !important;
-  line-height: calc(var(--heading-h1-line-height, 1.2) + var(--mobile-line-height-adjustment, 0)) !important;
-  text-align: var(--mobile-text-align, inherit) !important;
-}
-
-.hero-section .text--body {
-  font-size: calc(var(--text-body-size, 18px) * var(--mobile-text-scale, 1)) !important;
-  text-align: var(--mobile-text-align, inherit) !important;
-}
-
-.hero-section .hero-text-wrapper {
-  text-align: var(--mobile-text-align, inherit) !important;
-}
-
-/* Fix tablet/mobile stacking layout */
-@media (max-width: 1024px) {
+@media (min-width: 1025px) {
+  /* Ensure hero section maintains side-by-side layout */
   .hero-section .two-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    max-width: 600px !important;
-    margin: 0 auto !important;
-    gap: 32px !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    width: 100% !important;
-    max-width: 500px !important;
-    text-align: center !important;
-    order: 2 !important;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    text-align: left;
+    max-width: 100%;
+    margin: 0;
   }
   
   .hero-section .catey-image-wrapper {
-    width: auto !important;
-    max-width: 300px !important;
-    order: 1 !important;
+    order: 0;
+    max-width: 400px;
   }
   
-  .hero-section .heading--h1 {
-    text-align: center !important;
+  .hero-section .hero-text-wrapper {
+    order: 0;
+    max-width: 100%;
   }
   
+  .hero-section .heading--h1,
   .hero-section .text--body {
-    text-align: center !important;
+    text-align: left;
   }
-}
-
-/* Container width control for better line breaks */
-@media (max-width: 480px) {
-  .hero-section .hero-text-wrapper {
-    max-width: min(90vw, 400px) !important;
-    margin: 0 auto !important;
+  
+  /* Ensure cards don't have mobile restrictions */
+  .choose-your-next-step .card,
+  .choose-your-next-step .card--offer,
+  .testimonial-section .card--testimonial,
+  .real-women-section .card--testimonial {
+    max-width: none;
+    margin: 0;
   }
-}
-
-@media (max-width: 375px) {
-  .hero-section .hero-text-wrapper {
-    max-width: min(85vw, 320px) !important;
-  }
-}
-
-@media (max-width: 320px) {
-  .hero-section .hero-text-wrapper {
-    max-width: min(90vw, 290px) !important;
+  
+  .choose-your-next-step .card .button,
+  .choose-your-next-step .card--offer .button {
+    max-width: none;
   }
 }
 
