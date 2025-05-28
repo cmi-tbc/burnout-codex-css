@@ -1,31 +1,4 @@
 <style>
-/* Webflow Reset */
-html, body, div, section, article, aside, header, footer, nav, main, p, h1, h2, h3, h4, h5, h6, ul, ol, li, figure, figcaption, blockquote, dl, dt, dd {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #F5F0E6;
-  color: #1A1A1A;
-  line-height: 1.5;
-}
-
-/* Remove Webflow's global classes */
-.w-container, .w-button, .w-nav, .w-nav-link, .w-list {
-  all: unset;
-  all: revert;
-}
-
 /* ================================
    CSS CUSTOM PROPERTIES (BRAND COLORS)
    ================================ */
@@ -66,27 +39,40 @@ body {
   box-sizing: border-box;
 }
 
-body {
+html, body, div, section, article, aside, header, footer, nav, main, p, h1, h2, h3, h4, h5, h6, ul, ol, li, figure, figcaption, blockquote, dl, dt, dd {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #1A1A1A;
-  background-color: #F5F0E6;
+  color: var(--charcoal);
+  background-color: var(--warm-cream);
+}
+
+/* Remove Webflow's global classes */
+.w-container, .w-button, .w-nav, .w-nav-link, .w-list {
+  all: unset;
+  all: revert;
 }
 
 /* ================================
    TYPOGRAPHY SYSTEM
    ================================ */
 
-/* Headings: Playfair Display */
+/* Primary Headings: Playfair Display */
 .heading--h1 {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 900;
   font-size: clamp(32px, 3vw + 1rem, 48px);
   line-height: 1.2;
   margin-bottom: 16px;
-  color: #1A1A1A;
+  color: var(--charcoal);
 }
 
 .heading--h2 {
@@ -94,7 +80,8 @@ body {
   font-weight: 700;
   font-size: clamp(28px, 2.5vw + 1rem, 42px);
   line-height: 1.3;
-  color: #1A1A1A;
+  margin-bottom: 16px;
+  color: var(--charcoal);
 }
 
 .heading--h3 {
@@ -102,16 +89,16 @@ body {
   font-weight: 700;
   font-size: clamp(20px, 1.8vw + 1rem, 32px);
   line-height: 1.3;
-  color: #1A1A1A;
+  color: var(--charcoal);
 }
 
-/* Subheads: Roboto Slab */
+/* Secondary Headings: Roboto Slab */
 .subheading--sh1 {
   font-family: 'Roboto Slab', 'Times New Roman', serif;
   font-weight: 400;
   font-size: 28px;
   line-height: 1.4;
-  color: #1A1A1A;
+  color: var(--charcoal);
 }
 
 .subheading--sh2 {
@@ -119,7 +106,7 @@ body {
   font-weight: 600;
   font-size: 22px;
   line-height: 1.35;
-  color: #4D4D4D;
+  color: var(--mid-gray);
 }
 
 .subheading--sh3 {
@@ -127,29 +114,29 @@ body {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.3;
-  color: #4D4D4D;
+  color: var(--mid-gray);
 }
 
 /* Body Text: Source Sans Pro */
 .text--body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 8px;
-  color: #1A1A1A;
+  margin-bottom: 16px;
+  color: var(--charcoal);
 }
 
 .text--captions {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #4D4D4D;
+  color: var(--mid-gray);
 }
 
 .text--quotes {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: 16px;
@@ -157,14 +144,14 @@ body {
 }
 
 .text--list-item {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.6;
 }
 
 .text--sticky-bar {
-  font-family: 'Source Sans Pro';
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
@@ -172,63 +159,31 @@ body {
 }
 
 .text--buttons {
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
 }
 
-/* Global Text Block Spacing */
-.heading--h2,
-.heading--h3,
-.text--body {
-  margin-bottom: 16px;
-}
-
 /* ================================
-   SECTION SPACING & CONTAINERS
+   LAYOUT & CONTAINERS
    ================================ */
 .section--padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-@media (max-width: 1280px) {
-  .section--padding { padding-top: 100px; padding-bottom: 100px; }
-}
-
-@media (max-width: 1140px) {
-  .section--padding { padding-top: 80px; padding-bottom: 80px; }
-}
-
-@media (max-width: 1024px) {
-  .section--padding { padding-top: 60px; padding-bottom: 60px; }
-}
-
-@media (max-width: 768px) {
-  .section--padding { padding-top: 40px; padding-bottom: 40px; }
-}
-
-@media (max-width: 480px) {
-  .section--padding { padding-top: 32px; padding-bottom: 32px; }
+  padding: 120px 0;
 }
 
 .lg-container {
-  padding-left: clamp(16px, 3vw, 48px);
-  padding-right: clamp(16px, 3vw, 48px);
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 48px);
 }
 
 .container {
   max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
-/* ================================
-   GRID & LAYOUT SYSTEM
-   ================================ */
+/* Grid Systems */
 .cards-3-col {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -253,33 +208,13 @@ body {
   display: block;
 }
 
-/* Responsive adjustments for smaller desktop sizes */
-@media (max-width: 1280px) {
-  .two-col {
-    gap: clamp(20px, 3vw, 40px);
-  }
+.two-col.reverse { 
+  direction: rtl; 
 }
 
-@media (max-width: 1024px) {
-  .two-col {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 32px;
-  }
-  
-  .two-col img {
-    max-width: min(350px, 85%);
-  }
+.two-col.reverse > * { 
+  direction: ltr; 
 }
-
-@media (max-width: 768px) {
-  .two-col img {
-    max-width: min(300px, 90%);
-  }
-}
-
-.two-col.reverse { direction: rtl; }
-.two-col.reverse > * { direction: ltr; }
 
 .hero-text-wrapper {
   max-width: 100%;
@@ -287,46 +222,33 @@ body {
   gap: 24px;
 }
 
-/* Make sure your hero text scales nicely */
-@media (max-width: 1140px) {
-  .hero-text-wrapper {
-    max-width: 550px;
-  }
+.grid-2 { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 32px; 
 }
 
-@media (max-width: 1024px) {
-  .hero-text-wrapper {
-    max-width: 100%;
-  }
+.grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 32px; 
 }
-  
-.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
 
-@media (max-width: 1024px) {
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+.grid-4 { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 32px; 
 }
 
 .content-center {
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   text-align: center;
 }
-  
-.hi-catey-section .two-col {
-  gap: clamp(40px, 5vw, 72px);
-}
 
-.hi-catey-section .catey-text-wrapper {
-  padding-right: clamp(16px, 3vw, 32px);
-}
-  
 /* ================================
    UTILITY CLASSES
    ================================ */
-
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -345,7 +267,7 @@ body {
 
 .no-margin { margin: 0 !important; }
 .no-padding { padding: 0 !important; }
-.margin-auto { margin-left: auto; margin-right: auto; }
+.margin-auto { margin: 0 auto; }
 
 .flex { display: flex; }
 .flex-column { flex-direction: column; }
@@ -355,9 +277,9 @@ body {
 .flex-wrap { flex-wrap: wrap; }
 
 .full-width { width: 100%; }
-.max-width-600 { max-width: 600px; margin-left: auto; margin-right: auto; }
-.max-width-800 { max-width: 800px; margin-left: auto; margin-right: auto; }
-.max-width-1000 { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.max-width-600 { max-width: 600px; margin: 0 auto; }
+.max-width-800 { max-width: 800px; margin: 0 auto; }
+.max-width-1000 { max-width: 1000px; margin: 0 auto; }
 
 .img-full { width: 100%; height: auto; }
 .img-rounded { border-radius: 12px; }
@@ -366,27 +288,18 @@ body {
 .hidden { display: none !important; }
 .show { display: block !important; }
 
-@media (max-width: 768px) {
-  .hide-mobile { display: none !important; }
-}
+.text-primary { color: var(--primary-orange); }
+.text-secondary { color: var(--dark-orange); }
+.text-muted { color: var(--mid-gray); }
+.text-light { color: var(--light-cream); }
 
-@media (min-width: 769px) {
-  .hide-desktop { display: none !important; }
-}
-
-.text-primary { color: #CC5500; }
-.text-secondary { color: #993D00; }
-.text-muted { color: #4D4D4D; }
-.text-light { color: #FAF5EE; }  
-  
 /* ================================
    CARDS
    ================================ */
-
 .card {
   border-radius: 12px;
   padding: 24px;
-  background-color: #FAF5EE;
+  background-color: var(--light-cream);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease;
   height: fit-content;
@@ -397,10 +310,10 @@ body {
 }
 
 .card--offer {
-  background-color: #FAF5EE;
+  background-color: var(--light-cream);
   min-height: 240px;
 }
-  
+
 .card--offer h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -421,12 +334,12 @@ body {
 }
 
 .card--testimonial {
-  background-color: #F5F0E6;
+  background-color: var(--warm-cream);
   font-family: 'Lato', sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 1.5;
-  color: #1A1A1A;
+  color: var(--charcoal);
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -437,8 +350,8 @@ body {
 }
 
 .card--result-range {
-  background-color: #F5F0E6;
-  border: 2px solid #D8CCC0;
+  background-color: var(--warm-cream);
+  border: 2px solid var(--taupe);
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -446,7 +359,7 @@ body {
 }
 
 .card--result-cta {
-  background-color: #FAF5EE;
+  background-color: var(--light-cream);
   padding: 32px;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -455,8 +368,8 @@ body {
 
 /* Results Page - Score highlighting */
 .card--result-range.highlighted {
-  border: 3px solid #CC5500;
-  background-color: #FAF5EE;
+  border: 3px solid var(--primary-orange);
+  background-color: var(--light-cream);
   transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(204, 85, 0, 0.15);
   position: relative;
@@ -468,7 +381,7 @@ body {
   right: -10px;
   top: 50%;
   transform: translateY(-50%);
-  background: #CC5500;
+  background: var(--primary-orange);
   color: white;
   padding: 4px 8px;
   border-radius: 4px;
@@ -477,11 +390,11 @@ body {
   white-space: nowrap;
 }
 
-/* Red Flag Section - Initially hidden */
+/* Red Flag Section */
 .red-flag-section {
   display: none;
-  background-color: #FAF5EE;
-  border-left: 4px solid #CC5500;
+  background-color: var(--light-cream);
+  border-left: 4px solid var(--primary-orange);
   padding: 24px;
   border-radius: 8px;
   margin: 32px 0;
@@ -492,11 +405,11 @@ body {
 }
 
 .red-flag-section h3 {
-  color: #993D00;
+  color: var(--dark-orange);
   margin-bottom: 16px;
 }
 
-/* Personalized CTA Cards - Initially hidden */
+/* Personalized CTA Cards */
 .card--personalized-cta {
   display: none;
 }
@@ -548,7 +461,6 @@ body {
 /* ================================
    BUTTONS
    ================================ */
-
 .button {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -561,12 +473,12 @@ body {
   display: inline-block;
   cursor: pointer;
   transition: all 0.2s ease;
+  border: none;
 }
 
 .button--primary {
   background-color: var(--primary-orange);
   color: white;
-  border: none;
 }
 
 .button--primary:hover {
@@ -578,7 +490,6 @@ body {
 .button--secondary {
   background-color: var(--light-orange);
   color: white;
-  border: none;
 }
 
 .button--secondary:hover {
@@ -599,7 +510,6 @@ body {
 .button--olive {
   background-color: var(--olive);
   color: white;
-  border: none;
 }
 
 .button--olive:hover {
@@ -609,7 +519,6 @@ body {
 .button--premium {
   background: linear-gradient(135deg, var(--copper-accent) 0%, var(--muted-gold) 100%);
   color: white;
-  border: none;
   position: relative;
   overflow: hidden;
 }
@@ -631,14 +540,14 @@ body {
 
 .button--ghost {
   background-color: transparent;
-  color: #CC5500;
+  color: var(--primary-orange);
   border: none;
   text-align: left;
   padding-left: 0;
 }
 
 .button--ghost:hover {
-  color: #993D00;
+  color: var(--dark-orange);
   text-decoration: underline;
 }
 
@@ -651,42 +560,10 @@ body {
   background-color: var(--primary-orange);
   transform: none;
 }
-  
-/* Mobile Touch Targets */
-@media (max-width: 768px) {
-  .button, .quiz-button, .form-button {
-    min-height: 44px;
-    max-width: 320px;
-    width: auto;
-    margin: 0 auto 16px auto;
-    font-size: 16px;
-    padding: 16px 24px;
-    display: block;
-  }
-}
- 
-@media (max-width: 480px) {
-  .button, .quiz-button, .form-button {
-    max-width: 280px;
-    padding: 14px 18px;
-    font-size: 15px;
-  }
-}
-  
-@media (max-width: 1024px) {
-  .button--ghost {
-    text-align: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    display: block;
-    margin: 0 auto;
-  }
-}
 
 /* ================================
    FORMS
    ================================ */
-
 form {
   max-width: 600px;
   margin: 0 auto;
@@ -696,7 +573,7 @@ input, textarea, select {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   padding: 12px;
-  border: 1px solid #D1D1D1;
+  border: 1px solid var(--soft-gray);
   border-radius: 4px;
   width: 100%;
   margin-bottom: 16px;
@@ -720,7 +597,7 @@ input:focus, textarea:focus, select:focus {
 label {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  color: #1A1A1A;
+  color: var(--charcoal);
   margin-bottom: 8px;
   display: block;
 }
@@ -731,7 +608,7 @@ label {
   font-size: 16px;
   padding: 12px 24px;
   border-radius: 8px;
-  background-color: #CC5500;
+  background-color: var(--primary-orange);
   color: white;
   text-align: center;
   text-decoration: none;
@@ -740,21 +617,19 @@ label {
 }
 
 .form-button:hover {
-  background-color: #993D00;
+  background-color: var(--dark-orange);
 }
 
 /* ================================
    QUIZ ELEMENTS
    ================================ */
-
 .quiz-wrapper {
-  background-color: #FAF5EE;
+  background-color: var(--light-cream);
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .text--quiz-question {
@@ -762,7 +637,7 @@ label {
   font-weight: 600;
   font-size: 18px;
   line-height: 1.6;
-  color: #1A1A1A;
+  color: var(--charcoal);
   margin-bottom: 12px;
   margin-top: 32px;
 }
@@ -771,15 +646,11 @@ label {
   margin-top: 0;
 }
 
-@media (max-width: 1140px) {
-  .text--quiz-question { font-size: 16px; }
-}
-
 .quiz-answer {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   line-height: 1.3;
-  color: #1A1A1A;
+  color: var(--charcoal);
   display: flex;
   align-items: center;
   margin-bottom: 2px !important;
@@ -822,7 +693,7 @@ label {
   line-height: 1.5;
   padding: 12px 24px;
   border-radius: 8px;
-  background-color: #CC5500;
+  background-color: var(--primary-orange);
   color: white;
   text-align: center;
   text-decoration: none;
@@ -830,13 +701,14 @@ label {
   cursor: pointer;
   margin-top: 24px;
   transition: all 0.2s ease;
+  border: none;
 }
 
 .quiz-button:hover {
-  background-color: #993D00;
+  background-color: var(--dark-orange);
 }
 
-/* Override quiz container spacing */
+/* Quiz container overrides */
 .quiz-section-wrapper {
   margin-bottom: 16px !important;
   padding: 0 !important;
@@ -853,7 +725,7 @@ label {
   width: 100% !important;
 }
 
-/* Quiz Progress Bar - Fixed Version */
+/* Quiz Progress Bar */
 .quiz-progress-container {
   position: sticky;
   top: 0;
@@ -869,7 +741,7 @@ label {
 
 .quiz-progress {
   height: 8px;
-  background-color: #D8CCC0;
+  background-color: var(--taupe);
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 8px;
@@ -880,7 +752,7 @@ label {
 
 .quiz-progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, #CC5500 0%, #E67E22 100%);
+  background: linear-gradient(90deg, var(--primary-orange) 0%, var(--light-orange) 100%);
   width: 0%;
   transition: width 0.3s ease;
   border-radius: 4px;
@@ -889,33 +761,15 @@ label {
 .quiz-progress-text {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
-  color: #4D4D4D;
+  color: var(--mid-gray);
   text-align: center;
   max-width: 1140px;
   margin: 0 auto;
 }
 
-/* Mobile improvements */
-@media (max-width: 768px) {
-  .quiz-progress-container {
-    padding: 8px 16px;
-    backdrop-filter: none;
-    background: rgba(255, 255, 255, 0.98);
-  }
-  
-  .quiz-progress-text {
-    font-size: 12px;
-  }
-  
-  .quiz-wrapper {
-    padding: 24px 20px;
-  }
-}
-
 /* ================================
    LISTS
    ================================ */
-
 ul, ol {
   padding-left: 1.5rem;
   margin-bottom: 1.5rem;
@@ -952,7 +806,6 @@ li {
 /* ================================
    TABLES
    ================================ */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -961,22 +814,21 @@ table {
 
 th, td {
   padding: 12px;
-  border: 1px solid #D1D1D1;
+  border: 1px solid var(--soft-gray);
   text-align: left;
 }
 
 th {
-  background-color: #F5F0E6;
+  background-color: var(--warm-cream);
   font-weight: 600;
 }
 
 /* ================================
    MISCELLANEOUS COMPONENTS
    ================================ */
-
 .badge {
   display: inline-block;
-  background-color: #CC5500;
+  background-color: var(--primary-orange);
   color: white;
   font-size: 14px;
   padding: 4px 8px;
@@ -984,10 +836,10 @@ th {
 }
 
 .alert {
-  background-color: #F5F0E6;
-  color: #1A1A1A;
+  background-color: var(--warm-cream);
+  color: var(--charcoal);
   padding: 16px;
-  border-left: 4px solid #CC5500;
+  border-left: 4px solid var(--primary-orange);
   margin-bottom: 16px;
 }
 
@@ -1016,7 +868,6 @@ th {
 /* ================================
    UTILITY CLASSES - BRAND COLORS
    ================================ */
-
 .text-primary-orange { color: var(--primary-orange); }
 .text-light-orange { color: var(--light-orange); }
 .text-dark-orange { color: var(--dark-orange); }
@@ -1040,17 +891,15 @@ th {
 .chart-color-5 { color: var(--copper-accent); }
 
 /* ================================
-   HEADER NAVIGATION STYLES
+   HEADER NAVIGATION
    ================================ */
-
 .site-header {
-  background-color: var(--warm-cream);
+  background-color: rgba(245, 240, 230, 0.95);
   border-bottom: 1px solid var(--taupe);
   position: sticky;
   top: 0;
   z-index: 200;
   backdrop-filter: blur(10px);
-  background-color: rgba(245, 240, 230, 0.95);
 }
 
 .header-container {
@@ -1206,37 +1055,9 @@ th {
   border-bottom: none;
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 768px) {
-  .header-nav {
-    display: none;
-  }
-  
-  .mobile-menu-btn {
-    display: flex;
-  }
-  
-  .logo-burnout,
-  .logo-codex {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-container {
-    min-height: 60px;
-  }
-  
-  .logo-burnout,
-  .logo-codex {
-    font-size: 18px;
-  }
-}
-
 /* ================================
-   FOOTER DISCLAIMER STYLES - COMPLETE
+   FOOTER
    ================================ */
-
 .site-footer {
   background-color: var(--warm-cream);
   border-top: 1px solid var(--taupe);
@@ -1317,50 +1138,19 @@ th {
   color: var(--dark-orange);
 }
 
-@media (max-width: 768px) {
-  .footer-disclaimer {
-    padding: 12px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-text {
-    font-size: 13px;
-  }
-  
-  .footer-link {
-    font-size: 13px;
-  }
-  
-  .footer-divider {
-    margin: 0 8px;
-  }
-  
-  .footer-links {
-    margin-bottom: 12px;
-  }
-  
-  .site-footer {
-    padding: 24px 0;
-    margin-top: 48px;
-  }
-}
-
-/* Ensure compatibility with other sticky elements */
-.cookie-banner {
-  z-index: 300;
-}
-
 /* ================================
-   HOMEPAGE SECTION FIXES
+   HOMEPAGE SECTIONS
    ================================ */
 
-/* 1. Next Step Cards - Bold & Larger Headings */
+/* Hero Section */
+.hero-section {
+  padding: 100px 0 80px 0;
+}
+
+/* Next Step Cards - Enhanced */
 .card h3,
 .card--offer h3,
-.card .subheading--sh2,
-.card--offer .subheading--sh2,
-.choose-your-next-step .card h3,
-.choose-your-next-step .card .subheading--sh2 {
+.choose-your-next-step .card h3 {
   font-family: 'Playfair Display', serif !important;
   font-weight: 700 !important;
   font-size: 24px !important;
@@ -1369,13 +1159,7 @@ th {
   margin-bottom: 16px !important;
 }
 
-.card .text--body,
-.card--offer .text--body,
-.choose-your-next-step .card .text--body {
-  margin-bottom: 16px !important;
-}
-
-/* 2 & 3. Choose Your Next Step Section - Taupe Background & Proper Spacing */
+/* Choose Your Next Step Section */
 .choose-your-next-step {
   background-color: var(--taupe) !important;
   padding: 80px 0 !important;
@@ -1389,7 +1173,7 @@ th {
   margin-right: auto !important;
 }
 
-/* 4. Testimonial Section - Light Cream Background & Proper Spacing */
+/* Testimonial Section */
 .testimonial-section,
 .real-women-section {
   background-color: var(--light-cream) !important;
@@ -1405,25 +1189,14 @@ th {
   margin-right: auto !important;
 }
 
-/* Enhanced testimonial cards to pop against light cream background */
+/* Enhanced testimonial cards */
 .card--testimonial {
   background-color: var(--warm-cream) !important;
   border: 1px solid var(--soft-gray) !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
 }
 
-.card--testimonial .text--quotes {
-  margin: 0 !important;
-}
-
-/* 5. Additional Improvements I Identified */
-
-/* Hero section improvements */
-.hero-section {
-  padding: 100px 0 80px 0 !important;
-}
-
-/* Burnout looks like section spacing */
+/* Burnout looks like section */
 .burnout-looks-like-section {
   padding: 80px 0 !important;
 }
@@ -1436,20 +1209,7 @@ th {
   margin-bottom: 32px !important;
 }
 
-/* Button spacing in cards */
-.card .button,
-.card--offer .button {
-  margin-top: 20px !important;
-}
-
-/* Improve card grid spacing and equal heights */
-.cards-3-col {
-  gap: 32px !important;
-  margin-top: 0 !important;
-  align-items: stretch !important;
-}
-
-/* Ensure all cards have equal height */
+/* Equal height cards */
 .choose-your-next-step .card,
 .choose-your-next-step .card--offer {
   display: flex !important;
@@ -1458,7 +1218,6 @@ th {
   min-height: 300px !important;
 }
 
-/* Equal height for testimonial cards */
 .testimonial-section .card--testimonial,
 .real-women-section .card--testimonial {
   display: flex !important;
@@ -1467,72 +1226,17 @@ th {
   min-height: 200px !important;
 }
 
-/* Push buttons to bottom of cards */
+/* Push buttons to bottom */
 .choose-your-next-step .card .button,
 .choose-your-next-step .card--offer .button {
   margin-top: auto !important;
   margin-bottom: 0 !important;
 }
 
-/* Footer spacing adjustment */
-.site-footer {
-  margin-top: 80px !important;
-}
-
-/* Mobile responsive adjustments */
-@media (max-width: 768px) {
-  .choose-your-next-step,
-  .testimonial-section,
-  .real-women-section {
-    padding: 60px 0 !important;
-  }
-  
-  .choose-your-next-step .heading--h2,
-  .testimonial-section .heading--h2,
-  .real-women-section .heading--h2 {
-    margin-bottom: 32px !important;
-  }
-  
-  .card h3,
-  .card--offer h3 {
-    font-size: 24px !important;
-  }
-  
-  .hero-section {
-    padding: 60px 0 40px 0 !important;
-  }
-  
-  .burnout-looks-like-section {
-    padding: 60px 0 !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .choose-your-next-step,
-  .testimonial-section,
-  .real-women-section {
-    padding: 40px 0 !important;
-  }
-  
-  .card h3,
-  .card--offer h3 {
-    font-size: 22px !important;
-  }
-}
-
-/* ================================
-   HI CATEY SECTION - FIXED SPACING
-   ================================ */
-
+/* Hi Catey Section */
 .hi-catey-section {
   background-color: var(--warm-cream);
   padding: 80px 0;
-}
-
-.hi-catey-section .lg-container {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 0 clamp(16px, 3vw, 48px);
 }
 
 .hi-catey-section .two-col {
@@ -1540,12 +1244,10 @@ th {
   grid-template-columns: 400px 1fr !important;
   align-items: center !important;
   gap: clamp(40px, 6vw, 80px) !important;
-  max-width: 100% !important;
 }
 
 .hi-catey-section .catey-text-wrapper {
   max-width: 600px;
-  padding-right: 0;
 }
 
 .hi-catey-section .catey-text-wrapper h2 {
@@ -1578,8 +1280,107 @@ th {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+
+/* Large Desktop */
+@media (max-width: 1280px) {
+  .section--padding { 
+    padding: 100px 0; 
+  }
+  
+  .two-col {
+    gap: clamp(20px, 3vw, 40px);
+  }
+}
+
+/* Desktop */
+@media (max-width: 1140px) {
+  .section--padding { 
+    padding: 80px 0; 
+  }
+  
+  .hero-text-wrapper {
+    max-width: 550px;
+  }
+  
+  .text--quiz-question { 
+    font-size: 16px; 
+  }
+}
+
+/* Tablet */
 @media (max-width: 1024px) {
+  .section--padding { 
+    padding: 60px 0; 
+  }
+  
+  .two-col {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 32px;
+  }
+  
+  .two-col img {
+    max-width: min(350px, 85%);
+  }
+  
+  .hero-text-wrapper {
+    max-width: 100%;
+  }
+  
+  .grid-2, .grid-3, .grid-4 { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .header-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .button--ghost {
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Hero section stacking */
+  .hero-section .two-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 32px !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .hero-text-wrapper {
+    order: 1 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
+    order: 2 !important;
+    max-width: 300px !important;
+  }
+  
+  .hero-section .button {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+  
+  .hero-section .heading--h1,
+  .hero-section .text--body {
+    text-align: center !important;
+  }
+  
+  /* Hi Catey section responsive */
   .hi-catey-section .two-col {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
@@ -1595,69 +1396,8 @@ th {
     order: 1;
     max-width: 350px;
   }
-}
-
-@media (max-width: 768px) {
-  .hi-catey-section {
-    padding: 60px 0;
-  }
   
-  .hi-catey-section .catey-image-wrapper {
-    max-width: 280px;
-  }
-  
-  .hi-catey-section .two-col {
-    gap: 32px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hi-catey-section {
-    padding: 40px 0;
-  }
-  
-  .hi-catey-section .catey-text-wrapper h2 {
-    font-size: 28px;
-  }
-  
-  .hi-catey-section .catey-text-wrapper p {
-    font-size: 16px;
-  }
-}
-
-/* ================================
-   TARGETED RESPONSIVE FIXES - PRESERVE DESKTOP
-   ================================ */
-
-/* TABLET FIXES (1024px and below) - More Conservative */
-@media (max-width: 1024px) {
-  /* Fix 1: Hero section - ONLY for tablet/mobile */
-  .hero-section .two-col {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-    text-align: center;
-  }
-  
-  .hero-section .catey-image-wrapper {
-    order: 1;
-    max-width: 300px !important;
-    margin: 0 auto !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 2;
-    max-width: 600px !important;
-    margin: 0 auto !important;
-  }
-  
-  /* Fix 2: Catey section text containment - PRESERVE existing good layout */
-  .hi-catey-section .catey-text-wrapper {
-    max-width: 550px !important;
-    margin: 0 auto !important;
-    text-align: center !important;
-  }
-  
-  /* Fix 3: CTA cards - reduce size and fix button width */
+  /* Card improvements */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer {
     min-height: 280px !important;
@@ -1671,7 +1411,6 @@ th {
     margin: auto auto 0 auto !important;
   }
   
-  /* Fix 4: Testimonial cards - reduce empty space */
   .testimonial-section .card--testimonial,
   .real-women-section .card--testimonial {
     min-height: 140px !important;
@@ -1681,9 +1420,63 @@ th {
   }
 }
 
-/* MOBILE LARGE FIXES (768px and below) */
+/* Mobile Large */
 @media (max-width: 768px) {
-  /* Fix 5: Button height issues - MORE CONSERVATIVE */
+  .section--padding { 
+    padding: 40px 0; 
+  }
+  
+  .two-col img {
+    max-width: min(300px, 90%);
+  }
+  
+  .hide-mobile { 
+    display: none !important; 
+  }
+  
+  .logo-burnout,
+  .logo-codex {
+    font-size: 20px;
+  }
+  
+  .quiz-progress-container {
+    padding: 8px 16px;
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.98);
+  }
+  
+  .quiz-progress-text {
+    font-size: 12px;
+  }
+  
+  .quiz-wrapper {
+    padding: 24px 20px;
+  }
+  
+  .footer-disclaimer {
+    padding: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-text,
+  .footer-link {
+    font-size: 13px;
+  }
+  
+  .footer-divider {
+    margin: 0 8px;
+  }
+  
+  .footer-links {
+    margin-bottom: 12px;
+  }
+  
+  .site-footer {
+    padding: 24px 0;
+    margin-top: 48px;
+  }
+  
+  /* Enhanced button sizing */
   .choose-your-next-step .card .button,
   .choose-your-next-step .card--offer .button {
     min-height: 44px !important;
@@ -1691,7 +1484,6 @@ th {
     line-height: 1.3 !important;
   }
   
-  /* Slightly smaller cards */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer {
     max-width: 320px !important;
@@ -1702,35 +1494,84 @@ th {
     max-width: 320px !important;
   }
   
-  /* Better section spacing */
   .choose-your-next-step,
   .testimonial-section,
   .real-women-section {
     padding: 60px 0 !important;
   }
+  
+  .choose-your-next-step .heading--h2,
+  .testimonial-section .heading--h2,
+  .real-women-section .heading--h2 {
+    margin-bottom: 32px !important;
+  }
+  
+  .card h3,
+  .card--offer h3 {
+    font-size: 24px !important;
+  }
+  
+  .hero-section {
+    padding: 60px 0 40px 0 !important;
+  }
+  
+  .burnout-looks-like-section {
+    padding: 60px 0 !important;
+  }
+  
+  .hi-catey-section {
+    padding: 60px 0;
+  }
+  
+  .hi-catey-section .catey-image-wrapper {
+    max-width: 280px;
+  }
+  
+  .hi-catey-section .two-col {
+    gap: 32px !important;
+  }
 }
 
-/* MOBILE MEDIUM FIXES (480px and below) */
+/* Mobile Medium */
 @media (max-width: 480px) {
-  /* Fix 6: Hero heading hierarchy - PRESERVE power */
+  .section--padding { 
+    padding: 32px 0; 
+  }
+  
+  .header-container {
+    min-height: 60px;
+  }
+  
+  .logo-burnout,
+  .logo-codex {
+    font-size: 18px;
+  }
+  
+  .button, .quiz-button, .form-button {
+    min-height: 44px;
+    max-width: 320px;
+    width: auto;
+    margin: 0 auto 16px auto;
+    font-size: 16px;
+    padding: 16px 24px;
+    display: block;
+  }
+  
+  /* Hero improvements */
   .hero-section .heading--h1 {
     font-size: clamp(26px, 6vw, 32px) !important;
     line-height: 1.15 !important;
     margin-bottom: 16px !important;
   }
   
-  /* Fix 7: Hero image size - SMALLER */
   .hero-section .catey-image-wrapper {
     max-width: 250px !important;
   }
   
-  /* Fix 8: Better edge spacing - CONSERVATIVE */
   .lg-container {
-    padding-left: clamp(20px, 4vw, 28px) !important;
-    padding-right: clamp(20px, 4vw, 28px) !important;
+    padding: 0 clamp(20px, 4vw, 28px) !important;
   }
   
-  /* Cards with better margins */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer {
     max-width: calc(100% - 32px) !important;
@@ -1743,37 +1584,60 @@ th {
     margin: 0 16px !important;
   }
   
-  /* Smaller section padding */
   .choose-your-next-step,
   .testimonial-section,
   .real-women-section {
     padding: 50px 0 !important;
   }
+  
+  .choose-your-next-step .heading--h2,
+  .testimonial-section .heading--h2,
+  .real-women-section .heading--h2 {
+    margin-bottom: 32px !important;
+  }
+  
+  .card h3,
+  .card--offer h3 {
+    font-size: 22px !important;
+  }
+  
+  .hi-catey-section {
+    padding: 40px 0;
+  }
+  
+  .hi-catey-section .catey-text-wrapper h2 {
+    font-size: 28px;
+  }
+  
+  .hi-catey-section .catey-text-wrapper p {
+    font-size: 16px;
+  }
 }
 
-/* MOBILE SMALL FIXES (375px and below) */
+/* Mobile Small */
 @media (max-width: 375px) {
-  /* Fix 9: Hero heading - MAINTAIN POWER */
+  .button, .quiz-button, .form-button {
+    max-width: 280px;
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+  
   .hero-section .heading--h1 {
     font-size: clamp(24px, 5.5vw, 28px) !important;
     line-height: 1.1 !important;
   }
   
-  /* Smaller hero image */
   .hero-section .catey-image-wrapper {
     max-width: 230px !important;
   }
   
-  /* Better mobile spacing */
   .lg-container {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
+    padding: 0 18px !important;
   }
 }
 
-/* MOBILE TINY FIXES (320px and below) */
+/* Mobile Tiny */
 @media (max-width: 320px) {
-  /* Fix 10: Prevent cards from breaking containers */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer,
   .testimonial-section .card--testimonial,
@@ -1782,18 +1646,14 @@ th {
     max-width: calc(100% - 24px) !important;
   }
   
-  /* Tighter container spacing */
   .lg-container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
+    padding: 0 16px !important;
   }
   
-  /* Hero image even smaller */
   .hero-section .catey-image-wrapper {
     max-width: 210px !important;
   }
   
-  /* Smaller buttons */
   .choose-your-next-step .card .button,
   .choose-your-next-step .card--offer .button {
     padding: 10px 16px !important;
@@ -1801,34 +1661,47 @@ th {
   }
 }
 
-/* PRESERVE DESKTOP LAYOUTS - Override any conflicts */
-@media (min-width: 1025px) {
-  /* Ensure desktop hero section stays intact */
-  .hero-section .two-col {
-    grid-template-columns: 3fr 2fr !important;
-    gap: clamp(24px, 4vw, 60px) !important;
-    text-align: left !important;
+/* Desktop Restoration */
+@media (min-width: 769px) {
+  .hide-desktop { 
+    display: none !important; 
   }
-  
-  .hero-section .catey-image-wrapper {
-    order: 2 !important;
-    max-width: 400px !important;
+}
+
+@media (min-width: 1025px) {
+  /* Restore desktop hero layout */
+  .hero-section .two-col {
+    display: grid !important;
+    grid-template-columns: 3fr 2fr !important;
+    align-items: center !important;
+    gap: clamp(24px, 4vw, 60px) !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
   }
   
   .hero-section .hero-text-wrapper {
     order: 1 !important;
-    max-width: 100% !important;
-    margin: 0 !important;
+    text-align: left !important;
+    width: auto !important;
   }
   
-  /* Ensure Catey section stays intact */
-  .hi-catey-section .catey-text-wrapper {
-    max-width: 600px !important;
+  .hero-section .two-col > div:not(.hero-text-wrapper) {
+    order: 2 !important;
+    max-width: 400px !important;
+  }
+  
+  .hero-section .button {
     margin: 0 !important;
+    display: inline-block !important;
+  }
+  
+  .hero-section .heading--h1,
+  .hero-section .text--body {
     text-align: left !important;
   }
   
-  /* Ensure cards don't have size restrictions on desktop */
+  /* Restore desktop card layouts */
   .choose-your-next-step .card,
   .choose-your-next-step .card--offer {
     min-height: 300px !important;
@@ -1850,569 +1723,17 @@ th {
     margin: 0 !important;
     padding: 24px !important;
   }
-}
-
-/* ================================
-   DURABLE RESPONSIVE TYPOGRAPHY SYSTEM
-   ================================ */
-
-/* Extend existing typography classes with responsive scaling */
-:root {
-  /* Desktop defaults (already defined in your system) */
-  --heading-h1-size: clamp(32px, 3vw + 1rem, 48px);
-  --heading-h1-line-height: 1.2;
-  --text-body-size: 18px;
-  --text-body-line-height: 1.5;
   
-  /* Mobile scaling variables */
-  --mobile-heading-scale: 1;
-  --mobile-text-scale: 1;
-  --mobile-line-height-adjustment: 0;
-  --mobile-text-align: inherit;
-}
-
-/* Mobile scaling adjustments */
-@media (max-width: 480px) {
-  :root {
-    --mobile-heading-scale: 0.85;
-    --mobile-text-scale: 0.9;
-    --mobile-line-height-adjustment: -0.1;
-    --mobile-text-align: center;
-  }
-}
-
-@media (max-width: 375px) {
-  :root {
-    --mobile-heading-scale: 0.75;
-    --mobile-text-scale: 0.85;
-    --mobile-line-height-adjustment: -0.12;
-  }
-}
-
-@media (max-width: 320px) {
-  :root {
-    --mobile-heading-scale: 0.7;
-    --mobile-text-scale: 0.8;
-    --mobile-line-height-adjustment: -0.15;
-  }
-}
-
-/* Apply responsive scaling to hero section only */
-.hero-section .heading--h1 {
-  font-size: calc(var(--heading-h1-size, 48px) * var(--mobile-heading-scale, 1)) !important;
-  line-height: calc(var(--heading-h1-line-height, 1.2) + var(--mobile-line-height-adjustment, 0)) !important;
-  text-align: var(--mobile-text-align, inherit) !important;
-}
-
-.hero-section .text--body {
-  font-size: calc(var(--text-body-size, 18px) * var(--mobile-text-scale, 1)) !important;
-  text-align: var(--mobile-text-align, inherit) !important;
-}
-
-.hero-section .hero-text-wrapper {
-  text-align: var(--mobile-text-align, inherit) !important;
-}
-
-/* Fix tablet/mobile stacking layout */
-@media (max-width: 1024px) {
-  .hero-section .two-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+  /* Restore Hi Catey section */
+  .hi-catey-section .catey-text-wrapper {
     max-width: 600px !important;
-    margin: 0 auto !important;
-    gap: 32px !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    width: 100% !important;
-    max-width: 500px !important;
-    text-align: center !important;
-    order: 2 !important;
-  }
-  
-  .hero-section .catey-image-wrapper {
-    width: auto !important;
-    max-width: 300px !important;
-    order: 1 !important;
-  }
-  
-  .hero-section .heading--h1 {
-    text-align: center !important;
-  }
-  
-  .hero-section .text--body {
-    text-align: center !important;
-  }
-}
-
-/* Container width control for better line breaks */
-@media (max-width: 480px) {
-  .hero-section .hero-text-wrapper {
-    max-width: min(90vw, 400px) !important;
-    margin: 0 auto !important;
-  }
-}
-
-@media (max-width: 375px) {
-  .hero-section .hero-text-wrapper {
-    max-width: min(85vw, 320px) !important;
-  }
-}
-
-@media (max-width: 320px) {
-  .hero-section .hero-text-wrapper {
-    max-width: min(90vw, 290px) !important;
-  }
-}
-
-/* ================================
-   SURGICAL HERO SECTION ALIGNMENT FIX
-   Add this to the END of your CSS file
-   ================================ */
-
-/* Fix hero section alignment for tablet and mobile */
-@media (max-width: 1024px) {
-  .hero-section .two-col {
-    text-align: center !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    text-align: center !important;
-    margin: 0 auto !important;
-  }
-  
-  .hero-section .heading--h1 {
-    text-align: center !important;
-  }
-  
-  .hero-section .text--body {
-    text-align: center !important;
-  }
-}
-
-/* ================================
-   SURGICAL HERO SECTION STACKING FIX
-   Add this to the END of your CSS file
-   ================================ */
-
-/* Force hero section to stack vertically on tablet and mobile */
-@media (max-width: 1024px) {
-  .hero-section .two-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 32px !important;
-    max-width: 600px !important;
-    margin: 0 auto !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    text-align: center !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 2 !important;
-    max-width: 300px !important;
-  }
-  
-  /* Center the button */
-  .hero-section .button {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
-  }
-  
-  /* Fix heading hierarchy and centering */
-  .hero-section .heading--h1 {
-    font-size: clamp(28px, 5vw, 36px) !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 18px !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-/* RESTORE DESKTOP LAYOUT */
-@media (min-width: 1025px) {
-  .hero-section .two-col {
-    display: grid !important;
-    grid-template-columns: 3fr 2fr !important;
-    align-items: center !important;
-    gap: clamp(24px, 4vw, 60px) !important;
-    max-width: 100% !important;
     margin: 0 !important;
     text-align: left !important;
   }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    grid-column: 1 !important;
-    text-align: left !important;
-    width: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 2 !important;
-    grid-column: 2 !important;
-    max-width: 400px !important;
-  }
-  
-  .hero-section .button {
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    display: inline-block !important;
-  }
-  
-  .hero-section .heading--h1 {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .text--body {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .button--ghost {
-    text-align: left !important;
-  }
 }
 
-/* Additional mobile typography fixes */
-@media (max-width: 480px) {
-  .hero-section .heading--h1 {
-    font-size: clamp(24px, 6vw, 28px) !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 16px !important;
-  }
-/* ================================
-   SURGICAL HERO SECTION STACKING FIX
-   Add this to the END of your CSS file
-   ================================ */
-
-/* Force hero section to stack vertically on tablet and mobile */
-@media (max-width: 1024px) {
-  .hero-section .two-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 32px !important;
-    max-width: 600px !important;
-    margin: 0 auto !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    text-align: center !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 2 !important;
-    max-width: 300px !important;
-  }
-  
-  /* Center the button */
-  .hero-section .button {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
-  }
-  
-  /* Fix heading hierarchy and centering */
-  .hero-section .heading--h1 {
-    font-size: clamp(28px, 5vw, 36px) !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 18px !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
+/* Ensure compatibility with other sticky elements */
+.cookie-banner {
+  z-index: 300;
 }
-
-/* RESTORE DESKTOP LAYOUT */
-@media (min-width: 1025px) {
-  .hero-section .two-col {
-    display: grid !important;
-    grid-template-columns: 3fr 2fr !important;
-    align-items: center !important;
-    gap: clamp(24px, 4vw, 60px) !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    text-align: left !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    grid-column: 1 !important;
-    text-align: left !important;
-    width: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 2 !important;
-    grid-column: 2 !important;
-    max-width: 400px !important;
-  }
-  
-  .hero-section .button {
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    display: inline-block !important;
-  }
-  
-  .hero-section .heading--h1 {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .text--body {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .subheading--sh1 {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .button--ghost {
-    text-align: left !important;
-  }
-}
-
-/* Additional mobile typography fixes */
-@media (max-width: 480px) {
-  .hero-section .heading--h1 {
-    font-size: clamp(24px, 6vw, 28px) !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 16px !important;
-  }
-
-/* ================================
-   SURGICAL HERO SECTION STACKING FIX
-   Add this to the END of your CSS file
-   ================================ */
-
-/* Force hero section to stack vertically on tablet and mobile */
-@media (max-width: 1024px) {
-  .hero-section .two-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 32px !important;
-    max-width: 600px !important;
-    margin: 0 auto !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    text-align: center !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 2 !important;
-    max-width: 300px !important;
-  }
-  
-  /* Center the button */
-  .hero-section .button {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: inline-block !important;
-    line-height: 1.5 !important;
-    padding: 14px 28px !important;
-  }
-  
-  /* Fix heading hierarchy and centering */
-  .hero-section .heading--h1 {
-    font-size: clamp(28px, 5vw, 36px) !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 18px !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-/* RESTORE DESKTOP LAYOUT */
-@media (min-width: 1025px) {
-  .hero-section .two-col {
-    display: grid !important;
-    grid-template-columns: 3fr 2fr !important;
-    align-items: center !important;
-    gap: clamp(24px, 4vw, 60px) !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    text-align: left !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    grid-column: 1 !important;
-    text-align: left !important;
-    width: auto !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 2 !important;
-    grid-column: 2 !important;
-    max-width: 400px !important;
-  }
-  
-  .hero-section .button {
-    margin-left: 0 !important;
-    margin-right: auto !important;
-    display: inline-block !important;
-  }
-  
-  .hero-section .heading--h1 {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .text--body {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .subheading--sh1 {
-    text-align: left !important;
-    width: auto !important;
-  }
-  
-  .hero-section .button--ghost {
-    text-align: left !important;
-  }
-}
-
-/* Additional mobile typography fixes */
-@media (max-width: 480px) {
-  .hero-section .heading--h1 {
-    font-size: clamp(24px, 6vw, 28px) !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 16px !important;
-  }
-}/* ================================
-   SURGICAL HERO SECTION STACKING FIX
-   Add this to the END of your CSS file
-   ================================ */
-
-/* Force hero section to stack vertically on tablet and mobile */
-@media (max-width: 1024px) {
-  .hero-section .two-col {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 32px !important;
-    max-width: 600px !important;
-    margin: 0 auto !important;
-  }
-  
-  .hero-section .hero-text-wrapper {
-    order: 1 !important;
-    text-align: center !important;
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .hero-section .two-col > div:not(.hero-text-wrapper) {
-    order: 2 !important;
-    max-width: 300px !important;
-  }
-  
-  /* Center the button */
-  .hero-section .button {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
-  }
-  
-  /* Fix heading hierarchy and centering */
-  .hero-section .heading--h1 {
-    font-size: clamp(28px, 5vw, 36px) !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 18px !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-/* Additional mobile typography fixes */
-@media (max-width: 480px) {
-  .hero-section .heading--h1 {
-    font-size: clamp(24px, 6vw, 28px) !important;
-  }
-  
-  .hero-section .text--body {
-    font-size: 16px !important;
-  }
-}
-  .hero-section .hero-text-wrapper {
-    order: 2 !important;
-    text-align: center !important;
-  }
-}
-
 </style>
