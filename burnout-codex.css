@@ -1852,4 +1852,85 @@ th {
   }
 }
 
+/* ================================
+   DURABLE RESPONSIVE TYPOGRAPHY SYSTEM
+   ================================ */
+
+/* Extend existing typography classes with responsive scaling */
+:root {
+  /* Desktop defaults (already defined in your system) */
+  --heading-h1-size: clamp(32px, 3vw + 1rem, 48px);
+  --heading-h1-line-height: 1.2;
+  --text-body-size: 18px;
+  --text-body-line-height: 1.5;
+  
+  /* Mobile scaling variables */
+  --mobile-heading-scale: 1;
+  --mobile-text-scale: 1;
+  --mobile-line-height-adjustment: 0;
+  --mobile-text-align: inherit;
+}
+
+/* Mobile scaling adjustments */
+@media (max-width: 480px) {
+  :root {
+    --mobile-heading-scale: 0.85;
+    --mobile-text-scale: 0.9;
+    --mobile-line-height-adjustment: -0.1;
+    --mobile-text-align: center;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --mobile-heading-scale: 0.75;
+    --mobile-text-scale: 0.85;
+    --mobile-line-height-adjustment: -0.12;
+  }
+}
+
+@media (max-width: 320px) {
+  :root {
+    --mobile-heading-scale: 0.7;
+    --mobile-text-scale: 0.8;
+    --mobile-line-height-adjustment: -0.15;
+  }
+}
+
+/* Apply responsive scaling to hero section only */
+.hero-section .heading--h1 {
+  font-size: calc(var(--heading-h1-size, 48px) * var(--mobile-heading-scale, 1)) !important;
+  line-height: calc(var(--heading-h1-line-height, 1.2) + var(--mobile-line-height-adjustment, 0)) !important;
+  text-align: var(--mobile-text-align, inherit) !important;
+}
+
+.hero-section .text--body {
+  font-size: calc(var(--text-body-size, 18px) * var(--mobile-text-scale, 1)) !important;
+  text-align: var(--mobile-text-align, inherit) !important;
+}
+
+.hero-section .hero-text-wrapper {
+  text-align: var(--mobile-text-align, inherit) !important;
+}
+
+/* Container width control for better line breaks */
+@media (max-width: 480px) {
+  .hero-section .hero-text-wrapper {
+    max-width: min(90vw, 400px) !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero-section .hero-text-wrapper {
+    max-width: min(85vw, 320px) !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-section .hero-text-wrapper {
+    max-width: min(90vw, 290px) !important;
+  }
+}
+
 </style>
