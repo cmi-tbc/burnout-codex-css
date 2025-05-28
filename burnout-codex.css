@@ -1350,4 +1350,25 @@ th {
   z-index: 300;
 }
 
+.hi-catey-section .two-col {
+  align-items: center;
+  padding-top: clamp(40px, 5vw, 80px);
+  padding-bottom: clamp(40px, 5vw, 80px);
+}
+
+.hi-catey-section .catey-text-wrapper {
+  padding-right: clamp(24px, 5vw, 48px);
+  padding-left: clamp(24px, 5vw, 48px);
+  max-width: 600px;
+}
+
+.hi-catey-section img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
 </style>
