@@ -1352,7 +1352,7 @@ th {
 
 #hi-catey-grid {
   display: grid !important;
-  grid-template-columns: 3fr 2fr !important;
+  grid-template-columns: 400px 1fr !important;
   align-items: center !important;
   gap: clamp(40px, 5vw, 72px) !important;
   padding-top: clamp(40px, 5vw, 80px) !important;
