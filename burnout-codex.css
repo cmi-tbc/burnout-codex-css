@@ -1350,8 +1350,9 @@ th {
   z-index: 300;
 }
 
-/* Hi Catey Section Adjustments */
-.hi-catey-section .two-col {
+/* Hi Catey Section: Kill Webflow's Layout and Force Our Spacing */
+section.hi-catey-section > div.lg-container > div.two-col {
+  all: unset;
   display: grid !important;
   grid-template-columns: 3fr 2fr !important;
   align-items: center !important;
@@ -1360,13 +1361,13 @@ th {
   padding-bottom: clamp(40px, 5vw, 80px) !important;
 }
 
-.hi-catey-section .catey-text-wrapper {
+section.hi-catey-section .catey-text-wrapper {
   padding-right: clamp(24px, 5vw, 48px) !important;
   padding-left: clamp(24px, 5vw, 48px) !important;
   max-width: 600px !important;
 }
 
-.hi-catey-section img {
+section.hi-catey-section img {
   max-width: 400px !important;
   width: 100% !important;
   height: auto !important;
