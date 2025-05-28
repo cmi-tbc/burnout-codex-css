@@ -1351,6 +1351,166 @@ th {
 }
 
 /* ================================
+   HOMEPAGE SECTION FIXES
+   ================================ */
+
+/* 1. Next Step Cards - Bold & Larger Headings */
+.card h3,
+.card--offer h3,
+.choose-your-next-step .card h3 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+  color: var(--charcoal) !important;
+  margin-bottom: 16px !important;
+}
+
+.card p,
+.card--offer p,
+.choose-your-next-step .card p {
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: var(--charcoal) !important;
+  margin-bottom: 16px !important;
+}
+
+/* 2 & 3. Choose Your Next Step Section - Taupe Background & Proper Spacing */
+.choose-your-next-step {
+  background-color: var(--taupe) !important;
+  padding: 80px 0 !important;
+}
+
+.choose-your-next-step .heading--h2,
+.choose-your-next-step h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(32px, 4vw, 42px) !important;
+  line-height: 1.3 !important;
+  color: var(--charcoal) !important;
+  text-align: center !important;
+  margin-bottom: 48px !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 4. Testimonial Section - Light Cream Background & Proper Spacing */
+.testimonial-section,
+.real-women-section {
+  background-color: var(--light-cream) !important;
+  padding: 80px 0 !important;
+}
+
+.testimonial-section .heading--h2,
+.testimonial-section h2,
+.real-women-section .heading--h2,
+.real-women-section h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(32px, 4vw, 42px) !important;
+  line-height: 1.3 !important;
+  color: var(--charcoal) !important;
+  text-align: center !important;
+  margin-bottom: 48px !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Enhanced testimonial cards to pop against light cream background */
+.card--testimonial {
+  background-color: var(--warm-cream) !important;
+  border: 1px solid var(--soft-gray) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 5. Additional Improvements I Identified */
+
+/* Hero section improvements */
+.hero-section {
+  padding: 100px 0 80px 0 !important;
+}
+
+/* Burnout looks like section spacing */
+.burnout-looks-like-section {
+  padding: 80px 0 !important;
+}
+
+.burnout-looks-like-section .heading--h2,
+.burnout-looks-like-section h2 {
+  margin-bottom: 32px !important;
+}
+
+.burnout-looks-like-section ul {
+  margin-bottom: 32px !important;
+}
+
+/* Button spacing in cards */
+.card .button,
+.card--offer .button {
+  margin-top: 20px !important;
+}
+
+/* Improve card grid spacing */
+.cards-3-col {
+  gap: 32px !important;
+  margin-top: 0 !important;
+}
+
+/* Footer spacing adjustment */
+.site-footer {
+  margin-top: 80px !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .choose-your-next-step,
+  .testimonial-section,
+  .real-women-section {
+    padding: 60px 0 !important;
+  }
+  
+  .choose-your-next-step .heading--h2,
+  .choose-your-next-step h2,
+  .testimonial-section .heading--h2,
+  .testimonial-section h2,
+  .real-women-section .heading--h2,
+  .real-women-section h2 {
+    margin-bottom: 32px !important;
+    font-size: 28px !important;
+  }
+  
+  .card h3,
+  .card--offer h3 {
+    font-size: 24px !important;
+  }
+  
+  .hero-section {
+    padding: 60px 0 40px 0 !important;
+  }
+  
+  .burnout-looks-like-section {
+    padding: 60px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .choose-your-next-step,
+  .testimonial-section,
+  .real-women-section {
+    padding: 40px 0 !important;
+  }
+  
+  .card h3,
+  .card--offer h3 {
+    font-size: 22px !important;
+  }
+}
+
+/* ================================
    HI CATEY SECTION - FIXED SPACING
    ================================ */
 
