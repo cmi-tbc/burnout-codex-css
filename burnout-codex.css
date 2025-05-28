@@ -1913,6 +1913,21 @@ th {
   text-align: var(--mobile-text-align, inherit) !important;
 }
 
+/* Fix tablet/mobile stacking layout */
+@media (max-width: 1024px) {
+  .hero-section .hero-text-wrapper {
+    text-align: center !important;
+  }
+  
+  .hero-section .heading--h1 {
+    text-align: center !important;
+  }
+  
+  .hero-section .text--body {
+    text-align: center !important;
+  }
+}
+
 /* Container width control for better line breaks */
 @media (max-width: 480px) {
   .hero-section .hero-text-wrapper {
@@ -1932,5 +1947,4 @@ th {
     max-width: min(90vw, 290px) !important;
   }
 }
-
 </style>
