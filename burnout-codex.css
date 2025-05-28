@@ -1350,25 +1350,29 @@ th {
   z-index: 300;
 }
 
+/* Hi Catey Section Adjustments */
 .hi-catey-section .two-col {
-  align-items: center;
-  padding-top: clamp(40px, 5vw, 80px);
-  padding-bottom: clamp(40px, 5vw, 80px);
+  display: grid !important;
+  grid-template-columns: 3fr 2fr !important;
+  align-items: center !important;
+  gap: clamp(40px, 5vw, 72px) !important;
+  padding-top: clamp(40px, 5vw, 80px) !important;
+  padding-bottom: clamp(40px, 5vw, 80px) !important;
 }
 
 .hi-catey-section .catey-text-wrapper {
-  padding-right: clamp(24px, 5vw, 48px);
-  padding-left: clamp(24px, 5vw, 48px);
-  max-width: 600px;
+  padding-right: clamp(24px, 5vw, 48px) !important;
+  padding-left: clamp(24px, 5vw, 48px) !important;
+  max-width: 600px !important;
 }
 
 .hi-catey-section img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
+  max-width: 400px !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 12px !important;
+  display: block !important;
+  margin: 0 auto !important;
 }
 
 </style>
