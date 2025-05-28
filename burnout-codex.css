@@ -1915,8 +1915,22 @@ th {
 
 /* Fix tablet/mobile stacking layout */
 @media (max-width: 1024px) {
+  .hero-section .two-col {
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+  
   .hero-section .hero-text-wrapper {
     text-align: center !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  
+  .hero-section .catey-image-wrapper {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   
   .hero-section .heading--h1 {
@@ -1947,4 +1961,5 @@ th {
     max-width: min(90vw, 290px) !important;
   }
 }
+
 </style>
