@@ -1,0 +1,99 @@
+/* ==========================
+   Spacing + Grid System
+   ========================== */
+
+/* 1️⃣ Spacing Tokens (8px Modular Scale) */
+:root {
+  --space-xxs: 4px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+  --space-xxl: 128px;
+}
+
+/* 2️⃣ Section Padding (Vertical Rhythm) */
+.section--padding {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+@media (max-width: 1024px) {
+  .section--padding {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .section--padding {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+}
+
+/* 3️⃣ Grid Container */
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+
+/* 4️⃣ 12-Column Grid System */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-md);
+}
+
+@media (max-width: 1024px) {
+  .grid-12 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-12 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 5️⃣ Horizontal Padding (Gutters) */
+.padding-h-xs { padding-left: var(--space-xs); padding-right: var(--space-xs); }
+.padding-h-sm { padding-left: var(--space-sm); padding-right: var(--space-sm); }
+.padding-h-md { padding-left: var(--space-md); padding-right: var(--space-md); }
+.padding-h-lg { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+
+/* 6️⃣ Vertical Spacing Utilities */
+.margin-top-sm { margin-top: var(--space-sm); }
+.margin-top-md { margin-top: var(--space-md); }
+.margin-top-lg { margin-top: var(--space-lg); }
+.margin-top-xl { margin-top: var(--space-xl); }
+
+.margin-bottom-sm { margin-bottom: var(--space-sm); }
+.margin-bottom-md { margin-bottom: var(--space-md); }
+.margin-bottom-lg { margin-bottom: var(--space-lg); }
+.margin-bottom-xl { margin-bottom: var(--space-xl); }
+
+/* 7️⃣ Tightening for Text Hierarchy (Optional) */
+.heading--h1 + .subheading--sh { margin-top: var(--space-xs); }
+.heading--h2 + .text--body { margin-top: var(--space-sm); }
+.text--body + .button { margin-top: var(--space-md); }
+
+/* 8️⃣ Accessibility + Vertical Rhythm Note */
+/* All spacing aligns to 8px baseline. */
+/* No ad-hoc pixel values unless a visual exception is *intentionally* made. */
+/* Review vertical spacing at 320px, 768px, 1024px, 1440px, 1920px. */
+
+/* 9️⃣ Test Checklist (Final QA) */
+/*
+✅ Check all sections for breathing room (not cramped, not bloated)
+✅ Ensure text+background contrast meets WCAG 2.1 AA
+✅ Test gutters at 375px, 768px, 1024px, 1440px, 1920px
+✅ Review line-lengths: max 75 characters for body text
+✅ Confirm button spacing (min 44px touch target on mobile)
+✅ Validate no ad-hoc pixel spacings in codebase
+*/
