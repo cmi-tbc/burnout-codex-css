@@ -2464,4 +2464,34 @@ th {
   }
 }
 
+  /* Burnout Pain Section - Center Align and Bullet Reset on Tablet/Mobile */
+@media (max-width: 1024px) {
+  .burnout-looks-like-section {
+    text-align: center;
+  }
+
+  .burnout-looks-like-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  .burnout-looks-like-section li {
+    position: relative;
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 12px;
+  }
+
+  .burnout-looks-like-section li::before {
+    content: "•";
+    color: var(--olive);
+    font-size: 1.2em;
+    margin-right: 6px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
 </style>
