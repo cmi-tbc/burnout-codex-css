@@ -2507,4 +2507,14 @@ th {
   line-height: 1.2;
 }
 
+.w-button {
+  all: unset !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
 </style>
