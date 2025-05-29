@@ -2494,4 +2494,10 @@ th {
   }
 }
 
+.button, .quiz-button, .form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 </style>
