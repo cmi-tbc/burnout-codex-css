@@ -1,0 +1,129 @@
+/* ==========================
+   Burnout Codex Card System
+   ========================== */
+
+/* Base Card Structure */
+.card {
+  background-color: var(--warm-cream, #F5F0E6);
+  border: 1px solid var(--taupe, #D8CCC0);
+  border-radius: 12px;
+  padding: var(--space-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 300px;
+}
+
+/* Card Content Hierarchy */
+.card h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+  margin-bottom: var(--space-sm);
+}
+
+.card p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--body-size);
+  line-height: var(--body-line-height);
+  color: var(--charcoal, #1A1A1A);
+  margin-bottom: var(--space-md);
+}
+
+.card .button--primary {
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* Offer Cards */
+.card--offer {
+  border-top: 4px solid var(--primary-orange, #CC5500);
+}
+
+.card--offer h3 {
+  color: var(--primary-orange, #CC5500);
+}
+
+.card--offer .button--primary {
+  background-color: var(--primary-orange, #CC5500);
+  color: white;
+}
+
+.card--offer .button--primary:hover {
+  background-color: var(--dark-orange, #993D00);
+}
+
+/* Testimonial Cards */
+.card--testimonial {
+  background-color: var(--warm-cream, #F5F0E6);
+  border-left: 4px solid var(--olive, #556B2F);
+  font-style: italic;
+}
+
+.card--testimonial::before {
+  content: "“";
+  font-family: var(--font-heading);
+  font-size: 32px;
+  line-height: 1;
+  color: var(--olive, #556B2F);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.card--testimonial .author {
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-top: var(--space-sm);
+  color: var(--olive, #556B2F);
+}
+
+/* Quiz Result Cards */
+.card--result {
+  border: 2px solid var(--primary-orange, #CC5500);
+}
+
+.card--result[data-severity="low"] {
+  border-color: var(--olive, #556B2F);
+}
+
+.card--result[data-severity="medium"] {
+  border-color: var(--copper-accent, #B35A00);
+}
+
+.card--result[data-severity="high"] {
+  border-color: var(--primary-orange, #CC5500);
+}
+
+.card--result .result-label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--h3-size);
+  color: var(--primary-orange, #CC5500);
+  margin-bottom: var(--space-sm);
+}
+
+.card--result .button--primary {
+  background-color: var(--primary-orange, #CC5500);
+  color: white;
+}
+
+/* Utility Classes for Consistency */
+.card .button--primary {
+  padding: 14px 28px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--button-size);
+  line-height: var(--button-line-height);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    min-height: 250px;
+  }
+}
