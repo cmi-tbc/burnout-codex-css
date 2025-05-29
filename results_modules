@@ -1,0 +1,192 @@
+/* ================================================
+   Results Page: Narrative System CSS
+================================================ */
+
+/* 1️⃣ Hero Block */
+.results-hero {
+  text-align: center;
+  padding: var(--space-lg) 0;
+}
+
+.results-hero .heading--h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.2;
+  color: var(--charcoal);
+  margin-bottom: var(--space-sm);
+}
+
+.results-hero .text--body {
+  font-size: 18px;
+  color: var(--charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.results-hero .text--body.small-text {
+  font-size: 16px;
+  color: var(--mid-gray);
+}
+
+/* 2️⃣ 4-Card System Block */
+.card--score-range {
+  background-color: var(--light-cream);
+  border-radius: 12px;
+  padding: var(--space-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: left;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card--score-range h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: var(--space-xs);
+  color: var(--charcoal);
+}
+
+.card--score-range p {
+  font-family: var(--font-body, 'Satoshi', sans-serif);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--charcoal);
+}
+
+.card--score-range.highlighted {
+  border: 2px solid var(--primary-orange);
+  box-shadow: 0 4px 12px rgba(204, 85, 0, 0.1);
+  position: relative;
+}
+
+.card--score-range.highlighted::before {
+  content: "Your Score";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--primary-orange);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* 3️⃣ Red Flag Section */
+.red-flag-section {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--light-cream);
+  border-left: 4px solid var(--primary-orange);
+  padding: var(--space-md);
+  border-radius: 8px;
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-md);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.red-flag-icon {
+  font-size: 24px;
+  color: var(--primary-orange);
+  margin-right: var(--space-sm);
+}
+
+.red-flag-heading {
+  font-family: var(--font-body, 'Satoshi', sans-serif);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--primary-orange);
+  margin-bottom: var(--space-xs);
+}
+
+.red-flag-body {
+  font-family: var(--font-body, 'Satoshi', sans-serif);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.red-flag-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.red-flag-list li {
+  font-family: var(--font-body, 'Satoshi', sans-serif);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+/* 4️⃣ Focused Action Block */
+.card--focused-result {
+  background-color: var(--light-cream);
+  border: 2px solid var(--primary-orange);
+  padding: var(--space-lg);
+  border-radius: 12px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(204, 85, 0, 0.1);
+}
+
+.card--focused-result h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(24px, 4vw, 36px);
+  color: var(--primary-orange);
+  margin-bottom: var(--space-sm);
+}
+
+.card--focused-result p {
+  font-family: var(--font-body, 'Satoshi', sans-serif);
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+
+.card--focused-result .button {
+  margin-top: var(--space-sm);
+}
+
+/* 5️⃣ Final Caveat Disclaimer */
+.final-caveat {
+  background-color: transparent;
+  padding: var(--space-md) 0;
+  text-align: center;
+}
+
+.final-caveat-heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: var(--space-xs);
+}
+
+.final-caveat .text--body {
+  font-family: var(--font-body, 'Satoshi', sans-serif);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--mid-gray);
+  margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 768px) {
+  .card--focused-result {
+    padding: var(--space-md);
+  }
+
+  .red-flag-section {
+    flex-direction: column;
+  }
+
+  .red-flag-icon {
+    margin-bottom: var(--space-xs);
+  }
+}
