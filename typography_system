@@ -1,0 +1,133 @@
+/* ==========================
+   Typography System – Burnout Codex
+   ========================== */
+
+/* 1️⃣ Font Imports (Free Versions) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Roboto+Slab:wght@400;500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap');
+
+/* 2️⃣ Font Variables */
+:root {
+  --font-heading: 'Playfair Display', serif;
+  --font-subhead: 'Roboto Slab', serif;
+  --font-body: 'Satoshi', sans-serif;
+}
+
+/* 3️⃣ Font Sizes (Clamp Logic) */
+:root {
+  /* H1 */
+  --h1-size: clamp(2rem, 1.5rem + 4vw, 3.375rem); /* 32px → 54px */
+  --h1-line-height: 1.15;
+  --h1-letter-spacing: -0.5px;
+
+  /* H2 */
+  --h2-size: clamp(1.75rem, 1.25rem + 2.5vw, 2.5rem); /* 28px → 40px */
+  --h2-line-height: 1.2;
+  --h2-letter-spacing: -0.25px;
+
+  /* H3 */
+  --h3-size: clamp(1.5rem, 1rem + 2vw, 2rem); /* 24px → 32px */
+  --h3-line-height: 1.3;
+  --h3-letter-spacing: 0;
+
+  /* Subhead (Roboto Slab) */
+  --subhead-size: clamp(1.125rem, 0.9rem + 1.2vw, 1.375rem); /* 18px → 22px */
+  --subhead-line-height: 1.3;
+
+  /* Body */
+  --body-size: clamp(1.125rem, 0.875rem + 1vw, 1.25rem); /* 18px → 20px */
+  --body-line-height: 1.5;
+
+  /* Buttons */
+  --button-size: clamp(1rem, 0.75rem + 0.8vw, 1.125rem); /* 16px → 18px */
+  --button-line-height: 1.2;
+}
+
+/* 4️⃣ Typography Classes */
+.heading--h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: var(--h1-size);
+  line-height: var(--h1-line-height);
+  letter-spacing: var(--h1-letter-spacing);
+}
+
+.heading--h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--h2-size);
+  line-height: var(--h2-line-height);
+  letter-spacing: var(--h2-letter-spacing);
+}
+
+.heading--h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--h3-size);
+  line-height: var(--h3-line-height);
+  letter-spacing: var(--h3-letter-spacing);
+}
+
+.subheading--sh {
+  font-family: var(--font-subhead);
+  font-weight: 400;
+  font-size: var(--subhead-size);
+  line-height: var(--subhead-line-height);
+}
+
+.text--body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--body-size);
+  line-height: var(--body-line-height);
+}
+
+.text--button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--button-size);
+  line-height: var(--button-line-height);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 5️⃣ Spacing Tokens */
+:root {
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+}
+
+/* 6️⃣ Accessibility – Minimum Contrast Guidance (WCAG 2.1 AA) */
+/* Ensure text color + background has at least 4.5:1 ratio for body, 3:1 for headings */
+
+body {
+  color: var(--charcoal, #1A1A1A);
+  background-color: var(--warm-cream, #F5F0E6);
+}
+
+/* 7️⃣ Font Loading Best Practices (Preload + Fallbacks) */
+/* Add these to your <head>: */
+/*
+<link rel="preload" href="https://fonts.gstatic.com/s/playfairdisplay/v28/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYh6Y.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" as="style">
+*/
+
+/* 8️⃣ Device Testing Checklist (Test Typography at These Sizes) */
+/*
+- 320px (iPhone SE)
+- 375px (iPhone 12 Mini)
+- 430px (iPhone 14 Pro Max)
+- 768px (iPad)
+- 1024px (Small laptop)
+- 1280px (Standard desktop)
+- 1440px (Large desktop)
+- 1920px+ (Ultrawide)
+*/
+
+/* 9️⃣ Contrast Testing Checklist */
+/* Use WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/ */
+/* Ensure at least 4.5:1 for body, 3:1 for headings */
+
