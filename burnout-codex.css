@@ -658,7 +658,7 @@ body {
     min-height: 44px;
     max-width: 320px;
     width: auto;
-    margin: 0 auto 16px auto;
+    margin: 8px auto;
     font-size: 16px;
     padding: 16px 24px;
     display: block;
