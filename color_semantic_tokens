@@ -1,0 +1,31 @@
+:root {
+  /* 🔥 Primary Action Colors */
+  --color-action-primary: #CC5500; /* Primary Orange */
+  --color-action-hover: #993D00; /* Dark Orange */
+  --color-action-secondary: #E67E22; /* Light Orange */
+  --color-alert: #CC5500; /* Orange doubles as alert */
+
+  /* 🌿 Trust & Depth */
+  --color-trust: #556B2F; /* Olive */
+  --color-trust-light: #7A8B55; /* Light Olive */
+  --color-trust-dark: #3F4A21; /* Dark Olive */
+  --color-trust-accent: #2E3B35; /* Slate Green (data/infographics) */
+
+  /* 🖤 Text & UI */
+  --color-text-primary: #1A1A1A; /* Charcoal */
+  --color-text-secondary: #4D4D4D; /* Mid-Gray */
+  --color-text-muted: #A6A6A6; /* Light Gray */
+  --color-border: #D1D1D1; /* Soft Gray */
+
+  /* 🤎 Backgrounds & Surfaces */
+  --color-background: #F5F0E6; /* Warm Cream */
+  --color-background-alt: #FAF5EE; /* Light Cream */
+  --color-background-neutral: #D8CCC0; /* Taupe */
+
+  /* 💡 Editorial Accents */
+  --color-accent-editorial: #800000; /* Burgundy */
+
+  /* 💫 Premium Signals (Print Only) */
+  --color-premium-gold: #B8860B; /* Print only */
+  --color-premium-copper: #B35A00; /* Print only */
+}
