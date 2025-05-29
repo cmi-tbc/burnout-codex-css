@@ -2442,5 +2442,26 @@ th {
     text-align: center !important;
   }
 }
+
+@media (max-width: 768px) {
+  .burnout-looks-like-section {
+    text-align: center;
+  }
   
+  .burnout-looks-like-section .lg-container,
+  .burnout-looks-like-section .container {
+    text-align: center;
+  }
+  
+  .burnout-looks-like-section .heading--h2,
+  .burnout-looks-like-section .text--body,
+  .burnout-looks-like-section .subheading--sh3,
+  .burnout-looks-like-section ul,
+  .burnout-looks-like-section li {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 </style>
