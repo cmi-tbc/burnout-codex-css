@@ -219,4 +219,103 @@ h2, .heading--h2 {
   color: var(--color-text-muted);
 }
 
+/* ================================
+   HERO MODULE
+   ================================ */
+
+.hero-section {
+  background-color: var(--warm-cream);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.hero-text-wrapper {
+  text-align: left;
+  max-width: 600px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.hero-text-wrapper h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.hero-text-wrapper p {
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.hero-text-wrapper .button {
+  margin-top: 24px;
+}
+
+.hero-text-wrapper .button--ghost {
+  margin-top: 12px;
+}
+
+.catey-image-wrapper {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.catey-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .hero-text-wrapper {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-text-wrapper .button,
+  .hero-text-wrapper .button--ghost {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .catey-image-wrapper {
+    max-width: 320px;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .hero-text-wrapper h1 {
+    font-size: clamp(28px, 6vw, 38px);
+  }
+
+  .catey-image-wrapper {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text-wrapper h1 {
+    font-size: clamp(24px, 6vw, 32px);
+  }
+
+  .hero-text-wrapper p {
+    font-size: 16px;
+  }
+
+  .catey-image-wrapper {
+    max-width: 240px;
+  }
+}
+
 </style>
